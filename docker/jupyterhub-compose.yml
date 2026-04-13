@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  jupyterhub:
+    image: jupyterhub/jupyterhub:latest
+    container_name: shipsmart-jupyterhub
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./config/jupyterhub:/srv/jupyterhub
+    environment:
+      JUPYTERHUB_CONFIG_PATH: /srv/jupyterhub/jupyterhub_config.py
+    networks:
+      - shipsmart-network
+
+  jupyter-notebook:
+    image: shipsmart/jupyter:latest
+    container_name: shipsmart-notebook
+    environment:
+      JUPYTERHUB_API_URL: http://jupyterhub:8000/hub/api
+      JUPYTERHUB_CLIENT_ID: jupyter-notebook
+      JUPYTERHUB_SERVICE_PREFIX: /user/
+    entrypoint: "start-notebook.sh"
+    user: jovyan
+    networks:
+      - shipsmart-network
+
+networks:
+  shipsmart-network:
+    driver: bridge

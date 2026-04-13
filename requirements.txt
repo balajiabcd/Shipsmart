@@ -1,0 +1,2 @@
+# Core dependencies - to be populated as milestones progress
+# This file will be updated with each milestone's requirements

@@ -1,0 +1,501 @@
+date,country,region,holiday_name,holiday_type,celebrations_expected
+2026-06-21,Germany,North Rhine-Westphalia,German Unity Day,national,44260
+2026-04-22,Germany,Brandenburg,Epiphany,regional,13911
+2026-04-07,Germany,Bavaria,Ascension Day,movable,80139
+2027-11-03,Germany,Bavaria,Boxing Day,national,91515
+2027-01-08,Germany,Lower Saxony,New Year's Eve,observance,92759
+2025-08-09,Germany,Thuringia,Epiphany,regional,28427
+2024-07-22,Germany,Thuringia,Christmas Day,national,16405
+2027-07-17,Germany,Brandenburg,New Year's Eve,observance,75768
+2026-02-28,Germany,Lower Saxony,Christmas Day,national,47975
+2027-08-26,Germany,Brandenburg,New Year's Day,national,96135
+2024-03-09,Germany,Saxony,Boxing Day,national,83941
+2024-02-21,Germany,North Rhine-Westphalia,Christmas Day,national,56206
+2027-07-16,Germany,Bavaria,German Unity Day,national,3514
+21/11/2027,Germany,Thuringia,Epiphany,regional,42526
+2027-02-10,Germany,Baden-Württemberg,Ascension Day,movable,15718
+2024-01-06,Germany,Baden-Württemberg,New Year's Eve,observance,41760
+2026-01-06,Germany,Brandenburg,New Year's Eve,observance,93740
+2024-03-16,Germany,Saxony,Labour Day,national,30310
+2026-11-11,Germany,Saxony,New Year's Day,national,63960
+2025-02-11,Germany,Saxony,Labour Day,national,68446
+18/02/2024,Germany,Bavaria,Christmas Day,national,40366
+2027-08-09,Germany,Hamburg,New Year's Eve,observance,35597
+2025-04-10,Germany,North Rhine-Westphalia,Easter Monday,movable,25216
+2024-12-09,Germany,,Easter Monday,movable,74488
+2025-11-14,Germany,North Rhine-Westphalia,Epiphany,regional,7392
+2026-08-04,Germany,Baden-Württemberg,Christmas Day,national,67468
+2024-04-07,Germany,Schleswig-Holstein,Easter Monday,movable,84164
+2024-04-02,Germany,Lower Saxony,New Year's Eve,observance,12453
+2025-02-23,Germany,Schleswig-Holstein,Easter Monday,movable,28715
+2026-07-20,Germany,Berlin,Good Friday,movable,48211
+2024-01-13,Germany,Schleswig-Holstein,Whit Monday,movable,16390
+2027-08-08,Germany,Schleswig-Holstein,Christmas Day,national,72997
+2024-12-04,Germany,North Rhine-Westphalia,Christmas Day,national,63086
+2026-09-22,Germany,Thuringia,Labour Day,national,80311
+2025-10-05,Germany,Berlin,Whit Monday,movable,36847
+2026-06-10,Germany,Lower Saxony,Ascension Day,movable,21272
+2024-12-22,Germany,Brandenburg,Epiphany,regional,84331
+2027-08-18,Germany,Berlin,Whit Monday,movable,76277
+2026-08-21,Germany,Lower Saxony,Day of Unity,regional,33130
+2026-01-25,Germany,Lower Saxony,Christmas Day,national,66582
+2027-06-17,Germany,Thuringia,Whit Monday,movable,59478
+2025-03-19,Germany,Saxony,New Year's Eve,observance,52351
+2027-12-11,Germany,,Day of Unity,regional,56925
+2024-07-11,Germany,North Rhine-Westphalia,New Year's Eve,observance,81895
+2027-01-12,Germany,Brandenburg,New Year's Eve,observance,65945
+2025-01-10,Germany,Thuringia,Labour Day,national,10225
+06/28/2026,Germany,Berlin,St. Martin's Day,regional,9392
+2026-07-23,Germany,Bavaria,Boxing Day,national,66242
+2027-03-18,Germany,Brandenburg,New Year's Eve,observance,3211
+2024-05-28,Germany,Saxony,St. Martin's Day,regional,71346
+2024-03-23,Germany,North Rhine-Westphalia,Easter Monday,movable,94001
+2026-06-24,Germany,North Rhine-Westphalia,New Year's Eve,observance,66514
+2025-10-15,Germany,Hamburg,Whit Monday,movable,87603
+2025-09-16,Germany,Brandenburg,Easter Monday,movable,30104
+2025-09-12,Germany,Brandenburg,Epiphany,regional,93761
+2027-04-10,Germany,Bavaria,Whit Monday,movable,66062
+2025-01-24,Germany,Berlin,Good Friday,movable,12262
+2027-06-18,Germany,Hamburg,Christmas Day,national,72196
+2026-12-27,Germany,Thuringia,Day of Unity,regional,72352
+2024-12-20,Germany,Schleswig-Holstein,St. Martin's Day,regional,86559
+2024-05-19,Germany,Saxony,New Year's Day,national,24340
+2024-08-11,Germany,Bavaria,Whit Monday,movable,45408
+2024-08-27,Germany,Bavaria,Christmas Day,national,23473
+2027-04-20,Germany,Schleswig-Holstein,New Year's Eve,observance,99984
+2025-12-18,Germany,Baden-Württemberg,Ascension Day,movable,55949
+2026-08-11,Germany,Schleswig-Holstein,Day of Unity,regional,58404
+2025-08-17,Germany,Baden-Württemberg,Ascension Day,movable,13327
+2024-12-16,Germany,North Rhine-Westphalia,Labour Day,national,68797
+2027-07-04,Germany,Bavaria,Good Friday,movable,78039
+2024-03-23,Germany,Saxony,Good Friday,movable,45925
+2026-10-05,Germany,Hamburg,Labour Day,national,97942
+2024-05-15,Germany,Schleswig-Holstein,German Unity Day,national,35884
+2025-06-27,Germany,North Rhine-Westphalia,German Unity Day,national,80157
+2025-08-01,Germany,Lower Saxony,Christmas Day,national,53223
+2024-07-06,Germany,Thuringia,New Year's Day,national,76695
+2024-07-15,Germany,Thuringia,Christmas Day,national,81189
+2025-10-08,Germany,Schleswig-Holstein,Whit Monday,movable,81782
+2026-01-10,Germany,Brandenburg,Epiphany,regional,1643
+2024-06-07,Germany,Hamburg,St. Martin's Day,regional,19025
+2027-12-23,Germany,Brandenburg,Easter Monday,movable,33210
+2026-09-20,Germany,Baden-Württemberg,Boxing Day,national,20890
+2024-05-24,Germany,Hamburg,Day of Unity,regional,58325
+2026-03-19,Germany,Brandenburg,Boxing Day,national,58055
+2027-04-14,Germany,Bavaria,Christmas Day,national,4676
+2026-12-17,Germany,Berlin,Whit Monday,movable,68532
+2025-03-27,Germany,Brandenburg,Day of Unity,regional,54592
+2027-12-05,Germany,North Rhine-Westphalia,Easter Monday,movable,77244
+2027-09-07,Germany,Berlin,Whit Monday,movable,18654
+2026-09-19,Germany,,German Unity Day,national,2164
+2027-04-25,Germany,Brandenburg,Whit Monday,movable,27991
+2024-08-14,Germany,Baden-Württemberg,Boxing Day,national,42062
+2026-10-20,Germany,Saxony,New Year's Day,national,34701
+2026-09-26,Germany,Schleswig-Holstein,Whit Monday,movable,45355
+2025-02-06,Germany,Saxony,New Year's Day,movable,96072
+2027-05-15,Germany,Saxony,Day of Unity,regional,9371
+2025-07-03,Germany,Bavaria,Epiphany,regional,70189
+2027-08-04,Germany,Thuringia,Ascension Day,movable,53919
+2027-01-03,Germany,Brandenburg,German Unity Day,national,56311
+2024-09-11,Germany,,German Unity Day,national,56716
+2024-10-24,Germany,Baden-Württemberg,German Unity Day,national,57360
+2027-01-12,Germany,North Rhine-Westphalia,New Year's Eve,observance,36928
+2025-04-23,Germany,Bavaria,Christmas Day,national,48444
+2027-06-21,Germany,Brandenburg,German Unity Day,national,80986
+2026-11-05,Germany,Berlin,Christmas Day,national,57695
+2024-08-20,Germany,Hamburg,Ascension Day,national,93321
+2025-01-05,Germany,Lower Saxony,Christmas Day,national,71653
+2024-01-14,Germany,Schleswig-Holstein,Epiphany,regional,35010
+2024-04-24,Germany,Bavaria,New Year's Day,national,14562
+2024-02-12,Germany,Schleswig-Holstein,Boxing Day,national,30795
+2025-11-06,Germany,Brandenburg,Ascension Day,movable,82441
+2027-02-23,Germany,Brandenburg,Labour Day,national,16760
+2024-06-19,Germany,Thuringia,New Year's Day,national,70111
+2027-09-24,Germany,Hamburg,Epiphany,regional,26176
+2026-03-05,Germany,North Rhine-Westphalia,German Unity Day,national,39652
+2027-12-09,Germany,Brandenburg,Ascension Day,movable,74051
+2025-05-20,Germany,Berlin,St. Martin's Day,regional,19283
+2026-01-28,Germany,Bavaria,Labour Day,national,97344
+2027-06-06,Germany,North Rhine-Westphalia,Christmas Day,national,88115
+2027-07-05,Germany,Baden-Württemberg,Ascension Day,movable,90797
+2024-12-10,Germany,Brandenburg,German Unity Day,national,41584
+2025-11-24,Germany,Saxony,Epiphany,regional,20865
+2024-02-07,Germany,,Easter Monday,movable,75478
+2026-12-07,Germany,Saxony,Day of Unity,regional,68301
+2026-01-13,Germany,Berlin,Good Friday,movable,95257
+2025-08-17,Germany,Lower Saxony,Boxing Day,national,79408
+2026-07-02,Germany,Baden-Württemberg,Whit Monday,movable,73209
+2026-07-19,Germany,Hamburg,German Unity Day,national,36462
+2025-06-01,Germany,Hamburg,Whit Monday,movable,57408
+2027-10-01,Germany,Bavaria,Day of Unity,regional,57341
+2024-11-18,Germany,Schleswig-Holstein,New Year's Eve,observance,63425
+2024-07-06,Germany,North Rhine-Westphalia,Easter Monday,movable,98210
+2024-04-28,Germany,Thuringia,Easter Monday,movable,19155
+2026-07-28,Germany,Schleswig-Holstein,Ascension Day,movable,9904
+2024-06-28,Germany,Saxony,New Year's Day,national,56561
+2027-04-17,Germany,North Rhine-Westphalia,Boxing Day,national,33573
+2027-12-27,Germany,Berlin,Epiphany,regional,46215
+2025-12-18,Germany,Saxony,Ascension Day,movable,22599
+2025-09-14,Germany,Berlin,Boxing Day,national,92273
+2026-11-10,Germany,Hamburg,Good Friday,movable,86424
+2025-09-04,Germany,Saxony,Ascension Day,movable,98204
+2024-05-01,Germany,Lower Saxony,Whit Monday,movable,27834
+2027-10-07,Germany,Hamburg,New Year's Eve,observance,56402
+2026-10-13,Germany,Schleswig-Holstein,Whit Monday,movable,63928
+2024-11-15,Germany,Bavaria,Christmas Day,national,13649
+2027-09-18,Germany,Lower Saxony,Day of Unity,regional,86437
+2024-04-28,Germany,Berlin,Good Friday,movable,55925
+2025-08-06,Germany,Bavaria,Epiphany,regional,54807
+2027-12-27,Germany,Saxony,German Unity Day,national,78992
+2027-11-04,Germany,Saxony,New Year's Eve,observance,49419
+2026-01-28,Germany,Thuringia,Whit Monday,movable,81772
+2024-02-03,Germany,Lower Saxony,New Year's Day,national,63036
+2025-11-28,Germany,Hamburg,New Year's Eve,observance,53874
+2026-08-16,Germany,Hamburg,Day of Unity,regional,12079
+2027-04-18,Germany,Brandenburg,Whit Monday,regional,41102
+2026-07-28,Germany,Thuringia,Ascension Day,movable,38484
+2024-09-25,Germany,Bavaria,St. Martin's Day,regional,15367
+2024-07-20,Germany,Baden-Württemberg,Day of Unity,regional,17721
+2024-06-10,Germany,Hamburg,Christmas Day,national,19944
+2027-03-07,Germany,Brandenburg,Boxing Day,national,35850
+04/06/2024,Germany,Schleswig-Holstein,New Year's Eve,observance,70217
+2025-10-19,Germany,Brandenburg,Labour Day,national,42411
+2027-10-10,Germany,Lower Saxony,Easter Monday,movable,37807
+2025-08-03,Germany,Bavaria,New Year's Eve,observance,87020
+2026-03-25,Germany,Baden-Württemberg,Day of Unity,regional,13321
+2025-03-01,Germany,Bavaria,New Year's Day,national,48603
+15/02/2025,Germany,Bavaria,Ascension Day,movable,79978
+2024-02-25,Germany,North Rhine-Westphalia,German Unity Day,national,16305
+2026-11-21,Germany,Hamburg,Christmas Day,national,66927
+12/15/2025,Germany,Hamburg,Boxing Day,national,85586
+2027-04-06,Germany,Hamburg,Christmas Day,national,52399
+2026-07-20,Germany,Lower Saxony,Easter Monday,movable,18759
+2026-03-01,Germany,Bavaria,Ascension Day,movable,78094
+2027-01-22,Germany,Berlin,Whit Monday,movable,99955
+2027-11-28,Germany,Baden-Württemberg,New Year's Day,national,39321
+2025-06-18,Germany,Schleswig-Holstein,Day of Unity,regional,97671
+2025-05-10,Germany,Baden-Württemberg,Labour Day,national,5275
+2027-09-05,Germany,Hamburg,German Unity Day,national,99309
+2024-04-07,Germany,Thuringia,Ascension Day,movable,68286
+2025-09-09,Germany,Saxony,Good Friday,movable,18033
+2024-05-25,Germany,Saxony,St. Martin's Day,regional,74078
+2026-09-23,Germany,Schleswig-Holstein,Boxing Day,national,19761
+2025-02-15,Germany,,Whit Monday,movable,69863
+2025-05-01,Germany,Saxony,Whit Monday,movable,21998
+11/06/2027,Germany,Lower Saxony,Good Friday,movable,41232
+2026-11-18,Germany,Thuringia,Christmas Day,national,53393
+2024-12-27,Germany,Saxony,New Year's Eve,observance,24719
+2027-07-16,Germany,Lower Saxony,Good Friday,movable,21906
+2024-08-19,Germany,Baden-Württemberg,Ascension Day,movable,11104
+2026-12-07,Germany,Hamburg,Whit Monday,movable,87382
+2027-09-22,Germany,Baden-Württemberg,Day of Unity,regional,68271
+2024-10-26,Germany,Thuringia,New Year's Eve,observance,97214
+2026-09-07,Germany,Brandenburg,Ascension Day,movable,96043
+2027-02-12,Germany,Thuringia,Christmas Day,national,66990
+2026-07-08,Germany,Schleswig-Holstein,Good Friday,movable,70420
+27/10/2026,Germany,Baden-Württemberg,Labour Day,national,82494
+2025-07-04,Germany,Brandenburg,Easter Monday,movable,44858
+2027-10-16,Germany,Thuringia,Easter Monday,movable,46438
+2026-12-17,Germany,North Rhine-Westphalia,Ascension Day,movable,16343
+2027-10-28,Germany,Baden-Württemberg,New Year's Day,national,81134
+2026-05-07,Germany,Bavaria,Epiphany,regional,12886
+2025-02-20,Germany,Thuringia,St. Martin's Day,regional,40332
+2026-02-25,Germany,Saxony,Labour Day,national,39679
+2026-10-17,Germany,Lower Saxony,Christmas Day,movable,67126
+2024-12-05,Germany,Berlin,Labour Day,national,69800
+2026-08-14,Germany,Thuringia,St. Martin's Day,regional,32028
+2026-07-27,Germany,Thuringia,German Unity Day,national,19252
+2025-08-17,Germany,Brandenburg,Boxing Day,national,80755
+2025-08-14,Germany,Bavaria,German Unity Day,national,32438
+2027-01-16,Germany,Schleswig-Holstein,Labour Day,national,13769
+2027-02-15,Germany,North Rhine-Westphalia,Whit Monday,movable,50975
+2024-11-19,Germany,Berlin,Whit Monday,movable,94412
+2026-11-24,Germany,Schleswig-Holstein,Boxing Day,national,17468
+2024-09-11,Germany,Schleswig-Holstein,Ascension Day,movable,73565
+2025-07-10,Germany,Thuringia,St. Martin's Day,regional,86076
+01/12/2025,Germany,Hamburg,German Unity Day,national,39523
+2024-10-11,Germany,Brandenburg,Epiphany,regional,87225
+12/22/2026,Germany,Schleswig-Holstein,Labour Day,national,37155
+2026-01-02,Germany,Lower Saxony,Labour Day,national,80884
+2026-10-20,Germany,North Rhine-Westphalia,New Year's Eve,observance,82271
+2025-01-26,Germany,,Epiphany,regional,20134
+2026-01-27,Germany,Berlin,St. Martin's Day,regional,16436
+2026-05-27,Germany,North Rhine-Westphalia,Labour Day,national,53620
+2025-01-24,Germany,,Boxing Day,national,70115
+2025-08-28,Germany,Lower Saxony,New Year's Eve,observance,82976
+2027-04-24,Germany,Saxony,Whit Monday,movable,24455
+2027-12-25,Germany,Saxony,Boxing Day,national,60957
+2027-09-19,Germany,Thuringia,Labour Day,national,64276
+2025-02-18,Germany,Lower Saxony,German Unity Day,national,99969
+2026-06-02,Germany,Lower Saxony,Good Friday,movable,26631
+2026-04-27,Germany,Brandenburg,Good Friday,movable,95485
+2026-07-12,Germany,Hamburg,Good Friday,movable,60560
+2024-05-09,Germany,Berlin,Epiphany,regional,17131
+2025-09-09,Germany,Bavaria,Whit Monday,movable,63059
+2027-12-18,Germany,Hamburg,Boxing Day,national,76369
+2024-10-20,Germany,Hamburg,Ascension Day,movable,41540
+2027-12-03,Germany,Baden-Württemberg,New Year's Eve,observance,82404
+2025-07-01,Germany,Thuringia,Easter Monday,movable,54054
+2027-11-13,Germany,Baden-Württemberg,New Year's Eve,observance,16835
+2027-04-09,Germany,Lower Saxony,Easter Monday,movable,95166
+10/09/2024,Germany,North Rhine-Westphalia,Easter Monday,movable,86951
+2024-09-05,Germany,Saxony,Easter Monday,movable,86950
+2027-11-21,Germany,Bavaria,Christmas Day,national,34761
+2026-05-13,Germany,Hamburg,German Unity Day,national,17499
+2025-11-24,Germany,Bavaria,Day of Unity,regional,9239
+2024-07-28,Germany,Schleswig-Holstein,Labour Day,national,83260
+2027-06-10,Germany,Berlin,Christmas Day,national,53883
+2024-02-19,Germany,North Rhine-Westphalia,Epiphany,regional,85539
+2025-03-18,Germany,Berlin,Epiphany,regional,18887
+2027-05-03,Germany,Thuringia,Easter Monday,movable,90867
+2025-12-16,Germany,Berlin,Easter Monday,movable,3873
+26/04/2024,Germany,Berlin,Easter Monday,movable,63394
+2026-09-09,Germany,Schleswig-Holstein,Epiphany,regional,65861
+2026-09-06,Germany,Schleswig-Holstein,St. Martin's Day,regional,82562
+2027-09-18,Germany,Thuringia,Day of Unity,regional,40917
+2025-02-28,Germany,Saxony,German Unity Day,movable,46951
+2027-08-07,Germany,Berlin,Christmas Day,national,97750
+2026-06-09,Germany,Saxony,German Unity Day,national,81042
+2025-07-01,Germany,Hamburg,Whit Monday,movable,17909
+2026-01-14,Germany,Berlin,Ascension Day,movable,40847
+2026-11-01,Germany,,German Unity Day,national,72718
+2027-11-03,Germany,Schleswig-Holstein,St. Martin's Day,regional,50060
+2027-02-16,Germany,Baden-Württemberg,St. Martin's Day,regional,9296
+2025-09-18,Germany,Brandenburg,Good Friday,movable,53092
+2025-02-09,Germany,Lower Saxony,German Unity Day,national,46584
+2025-08-18,Germany,Schleswig-Holstein,New Year's Eve,observance,84110
+11/12/2024,Germany,Thuringia,Day of Unity,regional,99230
+13/10/2024,Germany,Thuringia,Christmas Day,national,43460
+2024-10-28,Germany,Lower Saxony,New Year's Eve,observance,58183
+25/09/2024,Germany,Berlin,Christmas Day,national,52321
+2024-09-11,Germany,North Rhine-Westphalia,New Year's Day,national,77977
+2027-10-22,Germany,Lower Saxony,Labour Day,national,99168
+2026-03-17,Germany,Hamburg,Ascension Day,movable,64318
+2027-08-11,Germany,Saxony,Boxing Day,national,26869
+2024-09-28,Germany,Brandenburg,Whit Monday,movable,1974
+2024-07-09,Germany,Hamburg,New Year's Eve,observance,34995
+11/11/2025,Germany,North Rhine-Westphalia,Day of Unity,regional,6055
+2024-05-14,Germany,Hamburg,Whit Monday,movable,10465
+2025-03-11,Germany,Schleswig-Holstein,Day of Unity,regional,77270
+23/05/2027,Germany,Thuringia,Boxing Day,national,51145
+2025-05-16,Germany,North Rhine-Westphalia,Day of Unity,regional,19316
+2024-03-04,Germany,Hamburg,Labour Day,national,9255
+2024-02-14,Germany,North Rhine-Westphalia,Christmas Day,national,88862
+2026-05-16,Germany,,Labour Day,national,99570
+2027-04-25,Germany,Berlin,Boxing Day,national,74314
+2024-04-21,Germany,Baden-Württemberg,Labour Day,movable,80207
+2025-05-25,Germany,Hamburg,Boxing Day,national,68841
+2024-06-05,Germany,Baden-Württemberg,Ascension Day,movable,21381
+2026-10-02,Germany,Lower Saxony,Whit Monday,movable,7599
+2027-04-09,Germany,Bavaria,Boxing Day,national,61311
+2024-01-19,Germany,Saxony,Easter Monday,movable,88455
+2025-10-18,Germany,,Day of Unity,regional,22292
+2024-04-16,Germany,Berlin,Good Friday,movable,13022
+2024-09-19,Germany,North Rhine-Westphalia,Easter Monday,movable,44691
+2026-05-21,Germany,Schleswig-Holstein,Ascension Day,movable,27959
+2027-08-23,Germany,,German Unity Day,national,54684
+2024-09-26,Germany,Saxony,German Unity Day,national,15547
+2025-02-26,Germany,Bavaria,St. Martin's Day,regional,19398
+2026-05-06,Germany,Baden-Württemberg,Good Friday,movable,83987
+2025-03-17,Germany,North Rhine-Westphalia,Good Friday,movable,94435
+2025-02-17,Germany,Bavaria,Ascension Day,movable,73888
+2026-06-14,Germany,Hamburg,Easter Monday,movable,69372
+2025-07-02,Germany,Brandenburg,Day of Unity,regional,77147
+2026-12-09,Germany,Lower Saxony,Boxing Day,national,13952
+2026-07-17,Germany,Baden-Württemberg,Ascension Day,movable,46804
+2024-06-19,Germany,,Labour Day,national,32451
+2026-03-01,Germany,Berlin,German Unity Day,national,67674
+2024-11-03,Germany,Bavaria,New Year's Day,national,53847
+2024-03-02,Germany,Hamburg,Day of Unity,regional,90880
+2026-05-18,Germany,Thuringia,Boxing Day,national,95374
+2024-05-15,Germany,Saxony,Whit Monday,movable,87772
+2027-02-05,Germany,Brandenburg,Epiphany,regional,48572
+2026-06-19,Germany,Bavaria,Christmas Day,national,99179
+2027-02-01,Germany,Brandenburg,New Year's Eve,observance,60455
+26/07/2027,Germany,Lower Saxony,German Unity Day,national,56035
+2024-08-21,Germany,Saxony,New Year's Eve,observance,66792
+2024-10-09,Germany,Bavaria,Christmas Day,national,69275
+2027-02-02,Germany,Lower Saxony,Day of Unity,regional,90583
+2025-04-11,Germany,Brandenburg,Day of Unity,regional,82719
+2024-04-16,Germany,Thuringia,Boxing Day,national,41868
+2025-04-12,Germany,Saxony,New Year's Eve,observance,83949
+2027-08-20,Germany,Brandenburg,Day of Unity,regional,75881
+2027-05-15,Germany,Schleswig-Holstein,New Year's Eve,observance,73160
+2025-11-03,Germany,Thuringia,New Year's Eve,observance,44620
+2024-01-27,Germany,Lower Saxony,Day of Unity,regional,19033
+2026-10-07,Germany,Schleswig-Holstein,Day of Unity,regional,15770
+2027-09-05,Germany,Hamburg,New Year's Day,national,22544
+04/06/2024,Germany,Bavaria,Labour Day,national,38679
+2025-05-14,Germany,Lower Saxony,Whit Monday,movable,52906
+21/09/2024,Germany,Brandenburg,Easter Monday,movable,34166
+2024-06-19,Germany,Lower Saxony,New Year's Eve,observance,62553
+2026-11-08,Germany,Lower Saxony,New Year's Eve,observance,24818
+09/19/2027,Germany,,New Year's Day,national,99163
+02/25/2027,Germany,Schleswig-Holstein,Easter Monday,movable,67333
+16/09/2027,Germany,Berlin,St. Martin's Day,regional,5305
+2025-01-17,Germany,Baden-Württemberg,St. Martin's Day,regional,38775
+2024-12-27,Germany,Bavaria,Christmas Day,national,74512
+2024-03-02,Germany,Saxony,Day of Unity,regional,87666
+2025-07-12,Germany,Thuringia,Day of Unity,regional,55474
+2026-07-22,Germany,,Christmas Day,national,4107
+2025-08-21,Germany,Thuringia,Easter Monday,movable,28855
+2026-09-26,Germany,Saxony,Day of Unity,regional,61497
+2026-11-11,Germany,Bavaria,St. Martin's Day,regional,52477
+2026-12-21,Germany,Baden-Württemberg,Ascension Day,movable,16814
+08/05/2026,Germany,North Rhine-Westphalia,Good Friday,movable,83495
+2027-03-05,Germany,Baden-Württemberg,Labour Day,national,90927
+2024-12-15,Germany,,St. Martin's Day,regional,88083
+2024-11-20,Germany,Baden-Württemberg,Day of Unity,regional,86865
+2027-06-10,Germany,Schleswig-Holstein,Epiphany,regional,6851
+2026-12-02,Germany,Baden-Württemberg,Boxing Day,national,74326
+2027-11-13,Germany,Saxony,Labour Day,national,5598
+2026-05-11,Germany,Schleswig-Holstein,Boxing Day,national,8550
+2025-11-17,Germany,Bavaria,Whit Monday,movable,92548
+2024-11-14,Germany,Bavaria,St. Martin's Day,regional,99298
+2025-03-05,Germany,Bavaria,St. Martin's Day,regional,57966
+22/10/2024,Germany,,German Unity Day,national,59232
+2026-12-19,Germany,Hamburg,Easter Monday,movable,70238
+2025-12-06,Germany,Schleswig-Holstein,Easter Monday,movable,81363
+2027-12-16,Germany,Berlin,Boxing Day,national,59259
+2026-09-22,Germany,Schleswig-Holstein,New Year's Day,national,61455
+2024-01-19,Germany,Schleswig-Holstein,Ascension Day,movable,74946
+2025-04-24,Germany,North Rhine-Westphalia,Easter Monday,movable,49276
+2025-03-02,Germany,Lower Saxony,Epiphany,regional,95584
+2025-01-15,Germany,Thuringia,New Year's Eve,observance,69490
+2025-10-16,Germany,Brandenburg,Christmas Day,national,27467
+2027-07-28,Germany,Baden-Württemberg,New Year's Eve,observance,46028
+2027-12-07,Germany,North Rhine-Westphalia,Christmas Day,national,76201
+2024-04-17,Germany,Hamburg,Boxing Day,national,46301
+2027-04-12,Germany,Lower Saxony,Christmas Day,national,45983
+2025-10-27,Germany,Lower Saxony,Good Friday,movable,37314
+2026-02-25,Germany,Lower Saxony,German Unity Day,national,46936
+2026-10-14,Germany,North Rhine-Westphalia,Epiphany,regional,79686
+2025-10-04,Germany,Thuringia,Christmas Day,national,50794
+2025-01-18,Germany,Berlin,Ascension Day,movable,17938
+2026-03-18,Germany,Saxony,St. Martin's Day,regional,65753
+2025-07-14,Germany,,Boxing Day,national,49334
+2027-03-04,Germany,Berlin,Whit Monday,movable,78393
+2027-08-01,Germany,Thuringia,New Year's Day,national,15147
+2024-10-20,Germany,Thuringia,German Unity Day,national,77474
+2026-12-03,Germany,Saxony,Epiphany,regional,53120
+2025-10-03,Germany,Saxony,Good Friday,movable,30113
+2026-10-20,Germany,,Christmas Day,national,74124
+2027-12-07,Germany,Brandenburg,Christmas Day,national,21460
+2026-11-18,Germany,Schleswig-Holstein,German Unity Day,national,48622
+2024-07-12,Germany,Lower Saxony,Epiphany,regional,90873
+2024-01-13,Germany,North Rhine-Westphalia,St. Martin's Day,regional,85185
+2026-07-22,Germany,Baden-Württemberg,New Year's Day,national,20365
+2026-07-17,Germany,Bavaria,German Unity Day,national,75073
+2027-05-22,Germany,Baden-Württemberg,Epiphany,regional,59386
+2025-08-28,Germany,Lower Saxony,New Year's Eve,observance,81283
+04/28/2024,Germany,Hamburg,Easter Monday,movable,78649
+2024-04-05,Germany,Brandenburg,Boxing Day,national,46896
+2025-04-19,Germany,North Rhine-Westphalia,St. Martin's Day,regional,63475
+2027-04-06,Germany,Berlin,Whit Monday,movable,9483
+2025-01-26,Germany,Berlin,Epiphany,regional,77720
+2026-08-12,Germany,North Rhine-Westphalia,New Year's Day,national,82865
+2025-03-12,Germany,Baden-Württemberg,Good Friday,movable,8946
+02/10/2025,Germany,Bavaria,Whit Monday,movable,54552
+2024-02-17,Germany,Bavaria,New Year's Day,national,29726
+2027-02-19,Germany,Schleswig-Holstein,Boxing Day,national,39464
+2025-04-17,Germany,Brandenburg,Labour Day,national,40543
+2025-09-11,Germany,,Labour Day,national,6497
+2026-01-28,Germany,Baden-Württemberg,Ascension Day,movable,80991
+2027-03-09,Germany,Berlin,Christmas Day,national,41211
+2026-03-24,Germany,Brandenburg,German Unity Day,national,74388
+2027-06-15,Germany,Saxony,Day of Unity,regional,91006
+2026-08-17,Germany,Bavaria,New Year's Day,national,9233
+2024-09-26,Germany,Brandenburg,Labour Day,national,24482
+2026-09-12,Germany,North Rhine-Westphalia,Christmas Day,national,6593
+2024-12-18,Germany,Hamburg,New Year's Eve,observance,82087
+2024-06-16,Germany,Saxony,St. Martin's Day,regional,93392
+03/02/2027,Germany,Hamburg,New Year's Day,national,31565
+2026-01-10,Germany,Schleswig-Holstein,Day of Unity,regional,13729
+2027-06-19,Germany,Hamburg,Day of Unity,regional,91286
+2027-10-12,Germany,Thuringia,Christmas Day,national,61304
+2027-01-20,Germany,Lower Saxony,Labour Day,national,21408
+19/05/2024,Germany,,Good Friday,movable,59929
+2027-07-19,Germany,Lower Saxony,Epiphany,regional,32352
+2027-02-25,Germany,Baden-Württemberg,Ascension Day,movable,48420
+2025-11-14,Germany,Schleswig-Holstein,German Unity Day,national,35714
+2026-03-28,Germany,Bavaria,Epiphany,regional,10897
+2027-06-02,Germany,Baden-Württemberg,St. Martin's Day,regional,78585
+03/05/2025,Germany,Saxony,Labour Day,national,55439
+2025-10-19,Germany,Baden-Württemberg,Ascension Day,movable,8350
+2024-02-21,Germany,Hamburg,Christmas Day,national,43539
+2025-07-15,Germany,Thuringia,Whit Monday,movable,26840
+2026-09-19,Germany,North Rhine-Westphalia,St. Martin's Day,regional,26087
+2026-03-06,Germany,Lower Saxony,Christmas Day,national,18999
+2026-01-07,Germany,Bavaria,Boxing Day,national,3176
+2025-03-22,Germany,Thuringia,Labour Day,national,6191
+2027-08-07,Germany,Hamburg,Epiphany,regional,1675
+01/05/2025,Germany,Saxony,Labour Day,national,64307
+2025-03-18,Germany,Brandenburg,Christmas Day,national,59047
+2026-04-24,Germany,Lower Saxony,Ascension Day,movable,71593
+2025-01-02,Germany,Berlin,Christmas Day,national,88003
+2027-08-12,Germany,,Easter Monday,movable,9960
+06/12/2027,Germany,Baden-Württemberg,Day of Unity,regional,60311
+2024-02-22,Germany,North Rhine-Westphalia,Christmas Day,national,24171
+2025-05-27,Germany,Lower Saxony,Epiphany,regional,35843
+2025-10-13,Germany,Schleswig-Holstein,New Year's Eve,observance,58231
+2025-06-01,Germany,North Rhine-Westphalia,New Year's Eve,observance,76837
+2026-09-15,Germany,Baden-Württemberg,Good Friday,movable,79527
+2027-05-07,Germany,,Good Friday,movable,19077
+2027-03-07,Germany,Bavaria,Whit Monday,movable,51305
+2024-03-17,Germany,North Rhine-Westphalia,Christmas Day,national,50654
+2024-03-08,Germany,Schleswig-Holstein,St. Martin's Day,regional,17397
+2024-11-12,Germany,Lower Saxony,Easter Monday,movable,54094
+2024-03-07,Germany,North Rhine-Westphalia,New Year's Day,national,17148
+2027-03-25,Germany,Schleswig-Holstein,Ascension Day,movable,75342
+2026-07-14,Germany,Schleswig-Holstein,Boxing Day,national,85100
+2025-07-07,Germany,Bavaria,German Unity Day,national,59081
+2025-11-17,Germany,Berlin,Labour Day,national,34064
+2025-03-23,Germany,Lower Saxony,Whit Monday,movable,74495
+2027-01-17,Germany,Berlin,Christmas Day,national,62588
+2026-12-27,Germany,North Rhine-Westphalia,Ascension Day,movable,36857
+2025-12-22,Germany,Hamburg,Labour Day,national,57576
+2024-12-14,Germany,Lower Saxony,Good Friday,movable,94014
+2026-10-01,Germany,,German Unity Day,national,30119
+2026-07-06,Germany,Baden-Württemberg,Whit Monday,movable,95414
+2024-04-21,Germany,Lower Saxony,German Unity Day,national,53112
+09/02/2024,Germany,Berlin,Labour Day,national,17191
+2024-01-22,Germany,North Rhine-Westphalia,German Unity Day,national,98286
+2025-11-23,Germany,Bavaria,Epiphany,regional,69291
+2026-06-28,Germany,North Rhine-Westphalia,Whit Monday,movable,35584
+2024-05-02,Germany,Thuringia,New Year's Eve,observance,22942
+2024-06-05,Germany,Thuringia,New Year's Eve,observance,89213
+2024-07-09,Germany,Bavaria,Boxing Day,national,61881
+2025-11-22,Germany,Brandenburg,New Year's Eve,regional,70925
+2025-11-12,Germany,Baden-Württemberg,Good Friday,movable,81391
+2027-01-03,Germany,Berlin,Day of Unity,regional,72314
+2026-11-21,Germany,Hamburg,Christmas Day,national,3369
+2025-10-09,Germany,North Rhine-Westphalia,Epiphany,regional,96399
+2027-02-03,Germany,Schleswig-Holstein,German Unity Day,national,54242
+2026-06-02,Germany,Lower Saxony,Ascension Day,movable,28113
+2027-03-18,Germany,Bavaria,German Unity Day,national,78599
+2025-07-14,Germany,Thuringia,New Year's Day,national,72558
+2027-01-16,Germany,Saxony,Good Friday,movable,25345
+2024-10-23,Germany,Baden-Württemberg,Boxing Day,national,96262
+2026-10-26,Germany,Bavaria,Epiphany,regional,19396
+2026-06-22,Germany,Lower Saxony,New Year's Eve,observance,85832
+2024-06-21,Germany,Bavaria,Good Friday,movable,73049
+2025-01-13,Germany,Brandenburg,Christmas Day,national,75880
+2026-05-07,Germany,Hamburg,New Year's Eve,observance,93389
+2024-08-15,Germany,Baden-Württemberg,Christmas Day,national,64458
+2027-06-04,Germany,Berlin,Good Friday,movable,83183
+2026-08-11,Germany,Berlin,German Unity Day,national,99171
+2024-03-21,Germany,,Epiphany,regional,91635
+2025-04-10,Germany,Bavaria,St. Martin's Day,regional,49881
+2026-04-20,Germany,Bavaria,Day of Unity,regional,8230
+2026-03-11,Germany,Berlin,New Year's Day,national,39499
+2027-09-22,Germany,Baden-Württemberg,Good Friday,movable,81812
+09/09/2025,Germany,Berlin,New Year's Day,national,24637
+2025-02-08,Germany,Hamburg,Day of Unity,regional,7841
+2027-11-28,Germany,Lower Saxony,New Year's Day,national,71482
+2025-02-17,Germany,Berlin,Christmas Day,national,86736
+2026-04-04,Germany,North Rhine-Westphalia,New Year's Eve,observance,87733
+2024-02-16,Germany,Berlin,Easter Monday,movable,81225
+2027-01-26,Germany,Baden-Württemberg,St. Martin's Day,regional,72201
+2027-02-09,Germany,Baden-Württemberg,New Year's Day,national,65644
+2025-04-18,Germany,Baden-Württemberg,Labour Day,national,48736
+2024-02-27,Germany,North Rhine-Westphalia,Boxing Day,national,28668

@@ -1,0 +1,30 @@
+# Shipsmart Database Configuration
+
+database:
+  host: localhost
+  port: 5432
+  name: shipsmart
+  user: shipsmart
+  password: shipsmart2024
+  pool_size: 20
+  max_overflow: 10
+  pool_timeout: 30
+  echo: false
+
+# Connection settings
+connection:
+  autocommit: false
+  connect_timeout: 10
+  options: "-c statement_timeout=30000"
+
+# Query settings
+queries:
+  fetch_size: 1000
+  batch_size: 5000
+  query_timeout: 300
+
+# Migration settings
+migration:
+  auto_migrate: false
+  versioning: true
+  table_name: alembic_version

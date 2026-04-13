@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: shipsmart-postgres
+    environment:
+      POSTGRES_DB: shipsmart
+      POSTGRES_USER: shipsmart
+      POSTGRES_PASSWORD: shipsmart2024
+      POSTGRES_HOST_AUTH_METHOD: md5
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/init:/docker-entrypoint-initdb.d
+    networks:
+      - shipsmart-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U shipsmart"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: shipsmart-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@shipsmart.com
+      PGADMIN_DEFAULT_PASSWORD: admin2024
+    ports:
+      - "5050:80"
+    networks:
+      - shipsmart-network
+    depends_on:
+      - postgres
+
+volumes:
+  postgres_data:
+
+networks:
+  shipsmart-network:
+    driver: bridge

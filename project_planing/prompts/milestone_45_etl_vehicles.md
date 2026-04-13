@@ -8,3 +8,12 @@ Create `src/data_engineering/etl_vehicles.py`:
 - Load: Insert into `vehicles` table
 - Create Airflow DAG `dags/etl_vehicles_dag.py`
 - Run and commit.
+
+---
+
+### Milestone #45 Completed
+- src/data_engineering/etl_vehicles.py (ETL pipeline for vehicles)
+- Extracts from data/raw/vehicles.csv
+- Transforms: capacity handling, maintenance/insurance status, vehicle age
+- Loads to vehicles table in database
+- ETL pipelines 36-45 complete!

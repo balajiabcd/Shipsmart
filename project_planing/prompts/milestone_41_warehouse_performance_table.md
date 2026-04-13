@@ -18,3 +18,7 @@ CREATE INDEX idx_wh_perf_warehouse ON warehouse_performance(warehouse_id);
 ```
 
 Run and commit.
+
+### Milestone #41 Completed
+- database/migrations/013_create_warehouse_performance.sql
+- Next: Milestone #42

@@ -17,3 +17,7 @@ CREATE INDEX idx_events_timestamp ON delivery_events(event_timestamp);
 ```
 
 Run and commit.
+
+### Milestone #39 Completed
+- database/migrations/011_create_delivery_events.sql
+- Next: Milestone #40

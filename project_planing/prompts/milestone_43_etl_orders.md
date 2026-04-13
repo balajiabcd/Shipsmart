@@ -54,3 +54,8 @@
 ## Section 3: Instructions for Next AI Agent
 
 *(Empty)*
+
+### Milestone #43 Completed
+- src/data_engineering/etl_orders.py (extract, transform, load)
+- Handles missing values, date cleaning, delay calculation
+- Next: Milestone #44

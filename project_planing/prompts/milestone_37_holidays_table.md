@@ -17,3 +17,7 @@ CREATE INDEX idx_holidays_date ON holidays(date);
 ```
 
 Run and commit.
+
+### Milestone #37 Completed
+- database/migrations/009_create_holidays.sql
+- Next: Milestone #38

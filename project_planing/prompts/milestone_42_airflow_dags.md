@@ -49,3 +49,8 @@
 ## Section 3: Instructions for Next AI Agent
 
 *(Empty)*
+
+### Milestone #42 Completed
+- docker/airflow/docker-compose.yml (Airflow setup)
+- dags/shipsmart_etl.py (main ETL DAG)
+- Next: Milestone #43

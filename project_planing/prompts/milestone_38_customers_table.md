@@ -18,3 +18,8 @@ CREATE INDEX idx_customers_email ON customers(email);
 ```
 
 Run and commit.
+
+### Milestone #38 Completed
+- database/migrations/010_create_customers.sql
+- PII handling note added
+- Next: Milestone #39

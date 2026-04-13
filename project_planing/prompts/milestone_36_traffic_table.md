@@ -18,3 +18,7 @@ CREATE INDEX idx_traffic_route ON traffic(route_id);
 ```
 
 Run and commit.
+
+### Milestone #36 Completed
+- database/migrations/008_create_traffic.sql
+- Next: Milestone #37

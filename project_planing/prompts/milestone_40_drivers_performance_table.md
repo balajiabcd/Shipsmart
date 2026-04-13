@@ -19,3 +19,7 @@ CREATE INDEX idx_driver_perf_date ON drivers_performance(date);
 ```
 
 Run and commit.
+
+### Milestone #40 Completed
+- database/migrations/012_create_drivers_performance.sql
+- Next: Milestone #41

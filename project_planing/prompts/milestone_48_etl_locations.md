@@ -8,3 +8,12 @@ Create `src/data_engineering/etl_locations.py`:
 - Load: Insert into `locations` table
 - Create DAG `dags/etl_locations_dag.py`
 - Run and commit.
+
+---
+
+### Milestone #48 Completed
+- src/data_engineering/etl_locations.py (ETL pipeline for locations)
+- Extracts from data/raw/locations.csv
+- Transforms: fixes geocoding issues, fills missing coordinates
+- Loads to locations table in database
+- Next: Milestone #49

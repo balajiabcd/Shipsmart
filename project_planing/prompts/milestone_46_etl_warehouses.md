@@ -8,3 +8,12 @@ Create `src/data_engineering/etl_warehouses.py`:
 - Load: Insert into `warehouses` table
 - Create DAG `dags/etl_warehouses_dag.py`
 - Run and commit.
+
+---
+
+### Milestone #46 Completed
+- src/data_engineering/etl_warehouses.py (ETL pipeline for warehouses)
+- Extracts from data/raw/warehouses.csv
+- Transforms: fills missing manager names, contacts
+- Loads to warehouses table in database
+- Next: Milestone #47

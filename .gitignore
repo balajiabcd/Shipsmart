@@ -173,3 +173,11 @@ credentials.json
 tmp/
 temp/
 *.tmp
+.env
+.env.example
+developer_inputs.md 
+developer_outputs.md
+
+
+# folders
+project_planing/ 

@@ -31,3 +31,12 @@
    - `fct_delivery_metrics.sql`
 
 5. Run dbt and commit.
+
+---
+
+### Milestone #58 Completed
+- dbt_shipsmart/README.md (DBT project setup)
+- Created dbt-postgres installation instructions
+- Created profiles.yml and project structure documentation
+- Documented models: dim_customers, dim_orders, dim_drivers, dim_warehouses, fct_delivery_metrics
+- Next: Milestone #59

@@ -96,7 +96,7 @@ Shipsmart/
 
 ```bash
 # Clone repository
-git clone <repository-url>
+git clone https://github.com/balajiabcd/Shipsmart
 cd Shipsmart
 
 # Create virtual environment
@@ -138,9 +138,8 @@ docker-compose up -d
 
 ## Documentation
 
-- [Project Plan](./project_planing/1_origin_plan.md)
-- [Milestones](./0_milestones.md)
-- [Team Structure](./team_structure.md)
+- [Project Plan](./project_planing/plan/1_origin_plan.md)
+- [Team Structure](./team/team_structure.md)
 
 ---
 

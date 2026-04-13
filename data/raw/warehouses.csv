@@ -1,0 +1,21 @@
+warehouse_id,warehouse_name,city,latitude,longitude,capacity_sqm,manager_name,manager_contact,email,established_date,operating_hours,zone,region,status
+WH-01,Berlin Hub,Berlin,52.52,13.405,11558,Thomas Schäfer,+49891539688,warehouse1@shipsmart.de,2016-08-10,00:00-24:00,B,West,expansion
+WH-02,Munich Hub,Munich,48.1351,11.582,11012,Christian Weber,+49416379897,warehouse2@shipsmart.de,2021-07-21,06:00-22:00,A,South,active
+WH-03,Hamburg Hub,Hamburg,53.5511,9.9937,17895,Klaus Weber,+49466981723,warehouse3@shipsmart.de,2020-02-09,06:00-22:00,A,Central,active
+WH-04,Frankfurt Hub,Frankfurt,50.1109,8.6821,21317,Stefan Müller,+49796369006,warehouse4@shipsmart.de,2021-03-20,00:00-24:00,B,East,active
+WH-05,Cologne Hub,Stuttgart,48.7758,9.1829,21547,Klaus Koch,,warehouse5@shipsmart.de,2015-12-20,06:00-22:00,A,East,active
+WH-06,Cologne Hub,Cologne,50.9375,6.9603,8704,Hans Schmidt,+49351356233,warehouse6@shipsmart.de,2021-04-13,06:00-22:00,C,South,active
+WH-07,Dusseldorf Hub,Dusseldorf,51.2277,6.7735,21961,Thomas Schröder,+49786511408,warehouse7@shipsmart.de,2019-04-24,06:00-22:00,B,Central,active
+WH-08,Dortmund Hub,Dortmund,51.5136,7.4653,13590,Klaus Weber,+49507489032,warehouse8@shipsmart.de,2015-09-11,06:00-22:00,A,West,active
+WH-09,Leipzig Hub,Leipzig,51.3397,12.3731,18621,,+49749902678,warehouse9@shipsmart.de,2020-10-11,06:00-22:00,C,Central,closed
+WH-10,Cologne Hub,Dresden,51.0504,13.7373,13054,Julia Müller,+49725266152,warehouse10@shipsmart.de,2021-11-13,08:00-20:00,B,Central,active
+WH-11,Nuremberg Hub,Nuremberg,49.4542,11.0775,20816,Nicole Richter,+49672004368,warehouse11@shipsmart.de,2015-04-29,06:00-22:00,A,South,expansion
+WH-12,Hannover Hub,Hannover,52.3759,9.732,20575,Klaus Schneider,+49617269311,warehouse12@shipsmart.de,2021-12-31,24/7,C,East,active
+WH-13,Bonn Hub,Bonn,50.7379,7.1762,21174,Thomas Schröder,+49884517661,warehouse13@shipsmart.de,2021-02-03,06:00-22:00,A,West,active
+WH-14,Mannheim Hub,Mannheim,49.4875,8.466,19600,Nicole Wolf,+49523616473,warehouse14@shipsmart.de,2022-05-20,08:00-20:00,A,West,expansion
+WH-15,Munster Hub,Munster,51.9607,7.6271,12349,Peter Fischer,+49701283518,warehouse15@shipsmart.de,2022-01-25,06:00-22:00,A,West,active
+WH-16,Karlsruhe Hub,Karlsruhe,49.0069,8.4037,21268,Sandra Schröder,+49459388082,warehouse16@shipsmart.de,2020-11-02,00:00-24:00,C,North,active
+WH-17,Augsburg Hub,Augsburg,48.3705,10.8978,20740,,+49758113975,warehouse17@shipsmart.de,2023-08-27,06:00-22:00,B,Central,active
+WH-18,Wuppertal Hub,Wuppertal,51.2562,7.1509,8089,Klaus Richter,+49484521818,warehouse18@shipsmart.de,2018-03-27,08:00-20:00,A,Central,active
+WH-19,Bielefeld Hub,Bielefeld,52.0302,8.5323,7534,Michael Schneider,+49567461925,warehouse19@shipsmart.de,2018-07-27,06:00-22:00,A,South,active
+WH-20,Münchengladbach Hub,Münchengladbach,51.1805,6.4428,8230,Anna Müller,+49837375799,warehouse20@shipsmart.de,2018-05-17,06:00-22:00,C,West,closed

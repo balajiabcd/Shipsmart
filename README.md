@@ -30,13 +30,12 @@ Shipsmart is an **end-to-end AI-powered logistics delay prediction system** desi
 
 ### Data Engineering
 - Apache Spark, Pandas, Dask, Polars
-- Apache Airflow, Prefect, Dagster
-- PostgreSQL, Snowflake, Delta Lake
+- PostgreSQL, SQLite
 
 ### Machine Learning
 - XGBoost, LightGBM, CatBoost, scikit-learn
 - PyTorch, TensorFlow (Neural Networks)
-- MLflow, Weights & Biases, Feast
+- MLflow, Feast
 
 ### LLM & AI
 - Ollama (Llama 3, Mistral, Phi-3)
@@ -47,11 +46,12 @@ Shipsmart is an **end-to-end AI-powered logistics delay prediction system** desi
 ### API & Frontend
 - FastAPI, Pydantic
 - React, Next.js, TypeScript, Tailwind CSS
+- Streamlit (Dashboard)
 
 ### Infrastructure
 - Kubernetes (k3s/minikube), Docker
-- Istio, Helm, ArgoCD
-- Prometheus, Grafana, Loki, ELK Stack
+- Helm, ArgoCD
+- Prometheus, Grafana, Loki
 
 ### CI/CD
 - GitHub Actions
@@ -64,23 +64,36 @@ Shipsmart is an **end-to-end AI-powered logistics delay prediction system** desi
 ```
 Shipsmart/
 ├── project_planing/          # Planning documents
-├── team_structure.md         # Team roles & workflow
-├── communication_log.txt    # Team communication
-├── data/                    # Data files
+│   ├── plan/               # Original project plan
+│   ├── milestones/          # Milestone tracking
+│   ├── prompts/            # Milestone prompts
+│   └── team/                # Team structure & chat logs
+├── frontend/                # Next.js frontend application
 ├── src/                     # Source code
-│   ├── data_simulation/     # Data generation
-│   ├── data_engineering/    # ETL pipelines
-│   ├── ml_models/           # ML models
-│   ├── explainability/      # SHAP/LIME
-│   ├── ai_layer/            # AI components
-│   ├── api/                 # FastAPI
-│   └── frontend/            # React/Next.js
-├── notebooks/               # Jupyter notebooks
-├── models/                  # Trained models
-├── config/                  # Configuration
-├── docker/                  # Dockerfiles
-├── ci/                      # CI/CD pipelines
-└── observability/           # Monitoring
+│   ├── data_simulation/    # Data generation scripts
+│   ├── data_engineering/   # ETL pipelines
+│   ├── ml_models/          # ML models (30+ classifiers/regressors)
+│   ├── explainability/     # SHAP/LIME explanations
+│   ├── decision_engine/    # Hybrid rule-based + ML engine
+│   ├── llm/               # LLM integration (Ollama, routing)
+│   ├── agents/            # Agent frameworks (LangGraph, AutoGen, MCP)
+│   ├── rag/               # RAG pipeline implementations
+│   ├── root_cause/        # Root cause analysis
+│   ├── route_optimization/ # Dijkstra, A*, OR-Tools, TSP
+│   ├── anomaly/           # Anomaly detection
+│   ├── simulation/        # Scenario simulation
+│   ├── features/          # Feature engineering
+│   ├── external_apis/     # External API connectors
+│   └── api/               # FastAPI application
+│       ├── endpoints/     # API endpoints
+│       └── dashboard/     # Streamlit dashboard
+├── models/                 # Trained model artifacts
+├── database/              # SQL schema & migrations
+├── docker/                # Dockerfiles & compose
+├── config/                # Kubernetes & Helm configs
+├── observability/         # Prometheus, Grafana, Loki
+├── tests/                 # Test suites
+└── requirements.txt       # Python dependencies
 ```
 
 ---
@@ -89,7 +102,7 @@ Shipsmart/
 
 ### Prerequisites
 - Python 3.10+
-- Docker & Kubernetes
+- Docker & Docker Compose
 - GitHub account
 
 ### Installation
@@ -112,10 +125,13 @@ pip install -r requirements.txt
 cp .env.example .env
 # Edit .env with your API keys
 
-# Run data simulation
-python src/data_simulation/generate_all.py
+# Generate simulated data
+python src/data_simulation/generate_orders.py
+python src/data_simulation/generate_drivers.py
+# ... (run other generators as needed)
 
 # Start services
+cd docker
 docker-compose up -d
 ```
 
@@ -125,52 +141,93 @@ docker-compose up -d
 
 | Endpoint | Description |
 |----------|-------------|
-| `/predict` | Get delay prediction |
-| `/predict_proba` | Get probability scores |
-| `/recommend` | Get action recommendations |
-| `/explain` | Get delay explanations |
-| `/chat` | Natural language queries |
-| `/simulate` | Run scenario simulations |
-| `/alerts` | Get active alerts |
-| `/optimize_route` | Get optimized routes |
+| `POST /api/v1/predict` | Get delay prediction |
+| `POST /api/v1/predict/batch` | Batch predictions |
+| `GET /api/v1/predict/model-info` | Model information |
+| `GET /api/v1/predict/feature-importance` | Feature importance |
+| `POST /api/v1/recommend` | Get action recommendations |
+| `POST /api/v1/explain` | Get delay explanations |
+| `POST /api/v1/chat` | Natural language queries |
+| `POST /api/v1/simulate` | Run scenario simulations |
+| `GET /api/v1/alerts` | Get active alerts |
+| `POST /api/v1/route/optimize` | Get optimized routes |
+| `POST /api/v1/route/optimize/multi` | Multi-route optimization |
 
 ---
 
-## Documentation
+## Running the Application
 
-- [Project Plan](./project_planing/plan/1_origin_plan.md)
-- [Team Structure](./team/team_structure.md)
-- [User Guide](./docs/guides/user_guide.md)
-- [API Reference](./docs/api/reference.md)
-- [Architecture Diagram](./docs/architecture.md)
-- [Deployment Guide](./docs/guides/deployment.md)
-- [Operations Runbook](./docs/guides/runbook.md)
+### Development
 
----
-
-## Quick Start
-
-### Development (Docker Compose)
 ```bash
-# Start all services
+# Start FastAPI server
+python -m src.api.main
+
+# API will be available at: http://localhost:8000
+# API docs: http://localhost:8000/docs
+```
+
+### Streamlit Dashboard
+
+```bash
+# Install streamlit
+pip install streamlit plotly requests
+
+# Run dashboard
+streamlit run src/api/dashboard/streamlit_dashboard.py
+
+# Dashboard will open at: http://localhost:8501
+```
+
+### Docker Compose (All Services)
+
+```bash
 cd docker
 docker-compose up -d
 
-# Services
+# Services:
 # API:        http://localhost:8000
 # Frontend:   http://localhost:3000
 # Grafana:    http://localhost:3001 (admin/admin)
 # Prometheus: http://localhost:9090
 ```
 
-### Production (Kubernetes)
-```bash
-# Apply Kubernetes manifests
-kubectl apply -k config/kubernetes/overlays/production
+---
 
-# Or install with Helm
-helm install shipsmart config/helm/shipsmart
-```
+## Project Components
+
+### Data Simulation (15+ generators)
+- Orders, Drivers, Vehicles, Warehouses
+- Routes, Locations, Weather, Traffic
+- Holidays, Customers, Delivery Events
+
+### ML Models (30+ models)
+- Classification: Logistic Regression, Random Forest, XGBoost, LightGBM, CatBoost, SVM, Naive Bayes, KNN, Decision Tree, AdaBoost, Gradient Boosting, Extra Trees
+- Regression: Linear, Ridge, Lasso, ElasticNet, Random Forest, XGBoost, LightGBM, CatBoost, SVR, KNN, Decision Tree, Extra Trees
+- Neural Networks: PyTorch, TensorFlow (CNN, LSTM)
+
+### AI Layer
+- Decision Engine (hybrid rule-based + ML)
+- LLM Integration (Ollama, OpenAI, Anthropic)
+- RAG Pipeline (6+ vector databases)
+- Agents (LangGraph, AutoGen, MCP)
+
+### Explainability
+- SHAP values, dependence, force, waterfall plots
+- LIME explanations
+- Permutation importance
+- Partial dependence
+
+---
+
+## Documentation
+
+- [Project Plan](./project_planing/plan/1_origin_plan.md)
+- [Team Structure](./project_planing/team/team_structure.md)
+- [Architecture](./docs/architecture.md)
+- [API Reference](./docs/api.md)
+- [Database Schema](./docs/database_schema.md)
+- [Deployment Guide](./docs/guides/deployment.md)
 
 ---
 
@@ -203,5 +260,5 @@ helm install shipsmart config/helm/shipsmart
 
 ---
 
-*Project: Shipsmart - The Brain Behind Every Delivery.*
+*Project: Shipsmart - The Brain Behind Every Delivery*
 *Tagline: "Shipsmart: The Brain Behind Every Delivery."*

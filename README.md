@@ -29,32 +29,39 @@ Shipsmart is an **end-to-end AI-powered logistics delay prediction system** desi
 ## Technology Stack
 
 ### Data Processing
+
 - Pandas, NumPy, PyArrow
 - Apache Spark (PySpark)
 
 ### Machine Learning
+
 - **Classic ML**: scikit-learn, XGBoost, LightGBM, CatBoost
 - **Deep Learning**: PyTorch, TensorFlow
 - **Model Tracking**: MLflow
 
 ### LLM & AI
+
 - **LLM**: Ollama (Llama 3, Mistral, Phi-3) - Local only
 - **Vector Database**: FAISS (local RAG)
 
 ### API & Web
+
 - **API**: FastAPI, Pydantic, Uvicorn
 - **Frontend**: React, Next.js, TypeScript, Tailwind CSS
 - **Dashboard**: Streamlit
 
 ### Database
+
 - PostgreSQL, SQLite, Redis
 
 ### Infrastructure & Monitoring
+
 - Docker, Kubernetes
 - Helm
 - Prometheus, Grafana, Loki
 
 ### CI/CD
+
 - GitHub Actions
 
 ---
@@ -63,11 +70,6 @@ Shipsmart is an **end-to-end AI-powered logistics delay prediction system** desi
 
 ```
 Shipsmart/
-├── project_planing/          # Planning documents
-│   ├── plan/               # Original project plan
-│   ├── milestones/          # Milestone tracking
-│   ├── prompts/            # Milestone prompts
-│   └── team/                # Team structure & chat logs
 ├── frontend/                # Next.js frontend application
 ├── src/                     # Source code
 │   ├── data_simulation/    # Data generation scripts

@@ -85,3 +85,6 @@ class AlertAggregator:
 if __name__ == "__main__":
     aggregator = AlertAggregator()
     print("Alert aggregator ready")
+
+
+      

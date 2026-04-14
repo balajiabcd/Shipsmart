@@ -41,3 +41,6 @@ echo ""
 echo "To start the API:"
 echo "  uvicorn src.api.main:app --reload"
 echo "========================================"
+
+
+  

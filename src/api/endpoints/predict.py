@@ -8,6 +8,8 @@ from fastapi import APIRouter, HTTPException, Query
 
 import logging
 
+from ..model_loader import get_predictor
+
 logger = logging.getLogger(__name__)
 
 
@@ -60,19 +62,16 @@ async def predict_delay(request: PredictionRequest):
     logger.info(f"Predicting delay for order: {request.order_id}")
 
     try:
-        delay_probability = 0.65
-        predicted_delay = delay_probability > 0.5
-
-        confidence = (
-            "high" if delay_probability > 0.8 or delay_probability < 0.2 else "medium"
-        )
+        predictor = get_predictor()
+        request_data = request.model_dump()
+        result = predictor.predict(request_data)
 
         return PredictionResponse(
             order_id=request.order_id,
-            predicted_delay=predicted_delay,
-            delay_probability=delay_probability,
-            confidence=confidence,
-            model_version="xgboost_v1.0",
+            predicted_delay=result["predicted_delay"],
+            delay_probability=result["delay_probability"],
+            confidence=result["confidence"],
+            model_version=result.get("model_version", "xgboost_v1.0"),
         )
     except Exception as e:
         logger.error(f"Prediction error: {e}")
@@ -84,24 +83,25 @@ async def predict_batch(request: BatchPredictionRequest):
     """Predict delays for multiple orders."""
     logger.info(f"Batch predicting {len(request.predictions)} orders")
 
+    predictor = get_predictor()
     predictions = []
     delayed_count = 0
 
     for req in request.predictions:
-        delay_probability = 0.65
-        predicted_delay = delay_probability > 0.5
+        request_data = req.model_dump()
+        result = predictor.predict(request_data)
 
         predictions.append(
             PredictionResponse(
                 order_id=req.order_id,
-                predicted_delay=predicted_delay,
-                delay_probability=delay_probability,
-                confidence="medium",
-                model_version="xgboost_v1.0",
+                predicted_delay=result["predicted_delay"],
+                delay_probability=result["delay_probability"],
+                confidence=result["confidence"],
+                model_version=result.get("model_version", "xgboost_v1.0"),
             )
         )
 
-        if predicted_delay:
+        if result["predicted_delay"]:
             delayed_count += 1
 
     return BatchPredictionResponse(

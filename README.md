@@ -6,56 +6,58 @@
 
 ## Project Overview
 
-Shipsmart is an **end-to-end AI-powered logistics delay prediction system** designed to help logistics companies predict delivery delays before they occur. Built with maximum complexity using cutting-edge technologies including machine learning, LLMs, agent frameworks, and full-stack DevOps.
+Shipsmart is an **end-to-end AI-powered logistics delay prediction system** designed to help logistics companies predict delivery delays before they occur. Built with maximum service provision using cutting-edge technologies including machine learning, LLMs, agent frameworks, and full-stack DevOps.
 
 ---
 
 ## Key Features
 
-| Feature | Description |
-|---------|-------------|
-| **Delay Prediction** | Binary classification (delayed/on-time) |
-| **Duration Estimation** | Regression for delay minutes |
-| **Root Cause Analysis** | SHAP + LLM explainability |
-| **Decision Engine** | Intelligent recommendations (reroute, reassign) |
-| **Chat Interface** | LLM-powered natural language queries |
-| **Scenario Simulation** | What-if analysis for planning |
-| **Anomaly Detection** | Automated alerting for delay spikes |
-| **Route Optimization** | Graph-based dynamic routing (Dijkstra + OR-Tools) |
-| **Agent Framework** | LangGraph + AutoGen + MCP integration |
+| Feature                       | Description                                       |
+| ----------------------------- | ------------------------------------------------- |
+| **Delay Prediction**    | Binary classification (delayed/on-time)           |
+| **Duration Estimation** | Regression for delay minutes                      |
+| **Root Cause Analysis** | SHAP + LLM explainability                         |
+| **Decision Engine**     | Intelligent recommendations (reroute, reassign)   |
+| **Chat Interface**      | LLM-powered natural language queries              |
+| **Scenario Simulation** | What-if analysis for planning                     |
+| **Anomaly Detection**   | Automated alerting for delay spikes               |
+| **Route Optimization**  | Graph-based dynamic routing (Dijkstra + OR-Tools) |
+| **Agent Framework**     | LangGraph + AutoGen + MCP integration             |
 
 ---
 
 ## Technology Stack
 
-### Data Engineering
-- Apache Spark, Pandas, Dask, Polars
-- PostgreSQL, SQLite
+### Data Processing
+- Pandas, NumPy, PyArrow
+- Apache Spark (PySpark)
 
 ### Machine Learning
-- XGBoost, LightGBM, CatBoost, scikit-learn
-- PyTorch, TensorFlow (Neural Networks)
-- MLflow, Feast
+- **Classic ML**: scikit-learn, XGBoost, LightGBM, CatBoost
+- **Deep Learning**: PyTorch, TensorFlow
+- **Model Tracking**: MLflow
 
 ### LLM & AI
-- Ollama (Llama 3, Mistral, Phi-3)
-- OpenAI (GPT-4), Anthropic (Claude)
-- LangChain, LangGraph, AutoGen
-- ChromaDB, Pinecone, Weaviate, Qdrant, Milvus, FAISS
+- **Local LLM**: Ollama (Llama 3, Mistral, Phi-3)
+- **Cloud LLM**: OpenAI (GPT-4), Anthropic (Claude)
+- **Agent Frameworks**: LangChain, LangGraph, AutoGen, MCP
+- **Vector Databases**: ChromaDB, Pinecone, Weaviate, Qdrant, Milvus, FAISS
 
-### API & Frontend
-- FastAPI, Pydantic
-- React, Next.js, TypeScript, Tailwind CSS
-- Streamlit (Dashboard)
+### API & Web
+- **API**: FastAPI, Pydantic, Uvicorn
+- **Frontend**: React, Next.js, TypeScript, Tailwind CSS
+- **Dashboard**: Streamlit
 
-### Infrastructure
-- Kubernetes (k3s/minikube), Docker
-- Helm, ArgoCD
+### Database
+- PostgreSQL, SQLite, Redis
+
+### Infrastructure & Monitoring
+- Docker, Kubernetes
+- Helm
 - Prometheus, Grafana, Loki
 
 ### CI/CD
 - GitHub Actions
-- Terraform, Ansible
 
 ---
 
@@ -101,6 +103,7 @@ Shipsmart/
 ## Getting Started
 
 ### Prerequisites
+
 - Python 3.10+
 - Docker & Docker Compose
 - GitHub account
@@ -139,19 +142,19 @@ docker-compose up -d
 
 ## API Endpoints
 
-| Endpoint | Description |
-|----------|-------------|
-| `POST /api/v1/predict` | Get delay prediction |
-| `POST /api/v1/predict/batch` | Batch predictions |
-| `GET /api/v1/predict/model-info` | Model information |
-| `GET /api/v1/predict/feature-importance` | Feature importance |
-| `POST /api/v1/recommend` | Get action recommendations |
-| `POST /api/v1/explain` | Get delay explanations |
-| `POST /api/v1/chat` | Natural language queries |
-| `POST /api/v1/simulate` | Run scenario simulations |
-| `GET /api/v1/alerts` | Get active alerts |
-| `POST /api/v1/route/optimize` | Get optimized routes |
-| `POST /api/v1/route/optimize/multi` | Multi-route optimization |
+| Endpoint                                   | Description                |
+| ------------------------------------------ | -------------------------- |
+| `POST /api/v1/predict`                   | Get delay prediction       |
+| `POST /api/v1/predict/batch`             | Batch predictions          |
+| `GET /api/v1/predict/model-info`         | Model information          |
+| `GET /api/v1/predict/feature-importance` | Feature importance         |
+| `POST /api/v1/recommend`                 | Get action recommendations |
+| `POST /api/v1/explain`                   | Get delay explanations     |
+| `POST /api/v1/chat`                      | Natural language queries   |
+| `POST /api/v1/simulate`                  | Run scenario simulations   |
+| `GET /api/v1/alerts`                     | Get active alerts          |
+| `POST /api/v1/route/optimize`            | Get optimized routes       |
+| `POST /api/v1/route/optimize/multi`      | Multi-route optimization   |
 
 ---
 
@@ -197,22 +200,26 @@ docker-compose up -d
 ## Project Components
 
 ### Data Simulation (15+ generators)
+
 - Orders, Drivers, Vehicles, Warehouses
 - Routes, Locations, Weather, Traffic
 - Holidays, Customers, Delivery Events
 
 ### ML Models (30+ models)
+
 - Classification: Logistic Regression, Random Forest, XGBoost, LightGBM, CatBoost, SVM, Naive Bayes, KNN, Decision Tree, AdaBoost, Gradient Boosting, Extra Trees
 - Regression: Linear, Ridge, Lasso, ElasticNet, Random Forest, XGBoost, LightGBM, CatBoost, SVR, KNN, Decision Tree, Extra Trees
 - Neural Networks: PyTorch, TensorFlow (CNN, LSTM)
 
 ### AI Layer
+
 - Decision Engine (hybrid rule-based + ML)
 - LLM Integration (Ollama, OpenAI, Anthropic)
 - RAG Pipeline (6+ vector databases)
 - Agents (LangGraph, AutoGen, MCP)
 
 ### Explainability
+
 - SHAP values, dependence, force, waterfall plots
 - LIME explanations
 - Permutation importance
@@ -248,15 +255,15 @@ docker-compose up -d
 
 ## Team
 
-| Role | Responsibility |
-|------|---------------|
-| Team Lead | Overall coordination, architecture |
-| ML Engineer 1 | Classification models |
-| ML Engineer 2 | Regression, Neural Networks, SHAP |
-| Data Engineer | ETL, Feature Engineering, APIs |
-| DevOps/MLOps | K8s, CI/CD, Monitoring |
-| Full-Stack Dev | FastAPI, React/Next.js |
-| AI/LLM Engineer | LLM, RAG, Agents |
+| Role            | Responsibility                     |
+| --------------- | ---------------------------------- |
+| Team Lead       | Overall coordination, architecture |
+| ML Engineer 1   | Classification models              |
+| ML Engineer 2   | Regression, Neural Networks, SHAP  |
+| Data Engineer   | ETL, Feature Engineering, APIs     |
+| DevOps/MLOps    | K8s, CI/CD, Monitoring             |
+| Full-Stack Dev  | FastAPI, React/Next.js             |
+| AI/LLM Engineer | LLM, RAG, Agents                   |
 
 ---
 

@@ -65,4 +65,4 @@ helm upgrade shipsmart ./config/helm/shipsmart
 
 - Network policies restrict pod-to-pod communication
 - Secrets should be updated with strong values in production
-- TLS certificates managed by cert-manager
+- TLS certificates managed by cert-manager 

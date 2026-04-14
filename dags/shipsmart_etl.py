@@ -62,3 +62,4 @@ load_data = BashOperator(
 
 # Task dependencies
 extract_data >> transform_data >> load_data >> check_quality
+ 

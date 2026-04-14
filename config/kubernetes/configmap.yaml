@@ -21,4 +21,4 @@ metadata:
 data:
   ENVIRONMENT: "production"
   TZ: "UTC"
-  PYTHONUNBUFFERED: "1"
+  PYTHONUNBUFFERED: "1" 

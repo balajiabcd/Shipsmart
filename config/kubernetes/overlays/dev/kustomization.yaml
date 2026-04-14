@@ -31,4 +31,4 @@ secretGenerator:
     literals:
       - database-url=postgresql://shipsmart:changeme@shipsmart-postgres:5432/shipsmart
       - redis-password=changeme
-      - jwt-secret=change-me-in-production
+      - jwt-secret=change-me-in-production 

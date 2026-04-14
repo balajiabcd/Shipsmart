@@ -386,4 +386,4 @@ GROUP BY dp.driver_id, d.full_name, d.status;
 - **Total Views**: 2
 - **Indexes**: 30+
 - **Foreign Keys**: Established for all relationships
-- **Data Integrity**: CHECK constraints, NOT NULL, UNIQUE
+- **Data Integrity**: CHECK constraints, NOT NULL, UNIQUE 

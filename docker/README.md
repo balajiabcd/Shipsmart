@@ -92,4 +92,4 @@ kubectl apply -f config/kubernetes/service-monitor.yaml
 develop → staging → production
 ```
 
-Each environment has its own Kubernetes context and image tags.
+Each environment has its own Kubernetes context and image tags. 

@@ -67,4 +67,4 @@ spec:
           service:
             name: shipsmart-frontend
             port:
-              number: 80
+              number: 80 

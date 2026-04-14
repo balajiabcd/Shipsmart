@@ -131,4 +131,4 @@ volumes:
 
 networks:
   shipsmart-network:
-    driver: bridge
+    driver: bridge 

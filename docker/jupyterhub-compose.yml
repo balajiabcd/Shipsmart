@@ -27,4 +27,4 @@ services:
 
 networks:
   shipsmart-network:
-    driver: bridge
+    driver: bridge 

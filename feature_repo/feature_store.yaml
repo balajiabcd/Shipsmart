@@ -60,4 +60,4 @@ features:
     entities:
       - name: order_id
         value_type: string
-    ttl: 86400
+    ttl: 86400 

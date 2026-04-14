@@ -158,3 +158,4 @@ def register_features():
 if __name__ == "__main__":
     print("Feast feature definitions created.")
     print("To apply: cd feature_repo && feast apply")
+ 

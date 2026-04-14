@@ -29,4 +29,4 @@ spec:
   minAvailable: 1
   selector:
     matchLabels:
-      app: shipsmart-frontend
+      app: shipsmart-frontend 

@@ -394,4 +394,4 @@ testing:
   load_testing:
     enabled: true
     target_rps: 1000
-    duration: 300
+    duration: 300 

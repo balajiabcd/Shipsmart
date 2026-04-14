@@ -180,4 +180,4 @@ jobs:
       - name: Deploy to production
         run: |
           echo "Deploying to production environment"
-          # kubectl set image deployment/shipsmart-api api=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-api:${{ github.sha }}
+          # kubectl set image deployment/shipsmart-api api=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-api:${{ github.sha }} 

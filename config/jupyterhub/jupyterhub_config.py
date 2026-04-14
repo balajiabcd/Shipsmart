@@ -37,3 +37,4 @@ c.JupyterHub.cookie_max_age_days = 7
 
 # Logging
 c.JupyterHub.log_level = "INFO"
+ 

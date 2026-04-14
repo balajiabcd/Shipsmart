@@ -95,4 +95,4 @@ spec:
   - to:
     - podSelector:
         matchLabels:
-          app: shipsmart-api
+          app: shipsmart-api 

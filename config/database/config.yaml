@@ -27,4 +27,4 @@ queries:
 migration:
   auto_migrate: false
   versioning: true
-  table_name: alembic_version
+  table_name: alembic_version 

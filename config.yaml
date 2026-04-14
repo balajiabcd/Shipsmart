@@ -157,69 +157,22 @@ explainability:
     num_samples: 1000
 
 llm:
-  providers:
-    - name: ollama
-      enabled: true
-      base_url: http://localhost:11434
-      models:
-        - phi:2.7b
-        - mistral
-        - llama3
-        - qwen3.5:4b
-        - gemma4:e2b
-      default_model: ${OLLAMA_ACTIVE_MODEL}
-      temperature: 0.7
-      max_tokens: 2048
-    
-    - name: openai
-      enabled: true
-      api_key_env: OPENAI_API_KEY
-      model: gpt-4
-      temperature: 0.7
-      max_tokens: 2048
-    
-    - name: anthropic
-      enabled: true
-      api_key_env: ANTHROPIC_API_KEY
-      model: claude-3-opus-20240229
-      temperature: 0.7
-      max_tokens: 2048
-  
-  routing:
-    strategy: fallback
-    fallback_order:
-      - ollama
-      - openai
-      - anthropic
-  
+  provider: ollama
+  base_url: http://localhost:11434
+  models:
+    - phi:2.7b
+    - mistral
+    - llama3
+  default_model: ${OLLAMA_ACTIVE_MODEL:-phi:2.7b}
+  temperature: 0.7
+  max_tokens: 2048
+
   rag:
     chunk_size: 512
     chunk_overlap: 50
     top_k: 5
-    rerank: true
 
-vector_databases:
-  chromadb:
-    enabled: true
-    persist_dir: ./chroma_data
-  pinecone:
-    enabled: true
-    api_key_env: PINECONE_API_KEY
-    environment: us-west1-gcp
-    index: shipsmart
-  weaviate:
-    enabled: true
-    url: http://localhost:8080
-    api_key_env: WEAVIATE_API_KEY
-  qdrant:
-    enabled: true
-    host: localhost
-    port: 6333
-    api_key_env: QDRANT_API_KEY
-  milvus:
-    enabled: true
-    host: localhost
-    port: 19530
+vector_database:
   faiss:
     enabled: true
     index_type: IVF_FLAT
@@ -228,16 +181,9 @@ vector_databases:
 agents:
   langgraph:
     enabled: true
-    checkpointer: sqlite
+    checkpointer: memory
     max_iterations: 10
     timeout: 300
-  autogen:
-    enabled: true
-    max_round: 10
-    speaker_selection: auto
-  mcp:
-    enabled: true
-    server_port: 8080
 
 api:
   host: 0.0.0.0

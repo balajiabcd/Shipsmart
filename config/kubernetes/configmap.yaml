@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: shipsmart-config
+  namespace: shipsmart
+data:
+  log-level: "INFO"
+  redis-host: "shipsmart-redis"
+  redis-port: "6379"
+  postgres-host: "shipsmart-postgres"
+  postgres-port: "5432"
+  postgres-database: "shipsmart"
+  api-version: "v1"
+  feature-flags: "enable_chat,enable_routing,enable_alerts"
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: shipsmart-env-config
+  namespace: shipsmart
+data:
+  ENVIRONMENT: "production"
+  TZ: "UTC"
+  PYTHONUNBUFFERED: "1"

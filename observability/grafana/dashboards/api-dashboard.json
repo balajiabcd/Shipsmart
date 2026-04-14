@@ -1,0 +1,62 @@
+{
+  "dashboard": {
+    "title": "Shipsmart API Overview",
+    "tags": ["shipsmart", "api"],
+    "timezone": "browser",
+    "refresh": "30s",
+    "panels": [
+      {
+        "id": 1,
+        "title": "Requests per Second",
+        "type": "graph",
+        "gridPos": {"x": 0, "y": 0, "w": 12, "h": 8},
+        "targets": [
+          {
+            "expr": "sum(rate(http_requests_total{job=\"shipsmart-api\"}[5m])) by (method)",
+            "legendFormat": "{{method}}"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Error Rate",
+        "type": "graph",
+        "gridPos": {"x": 12, "y": 0, "w": 12, "h": 8},
+        "targets": [
+          {
+            "expr": "sum(rate(http_requests_total{status=~\"5..\"}[5m])) / sum(rate(http_requests_total[5m]))",
+            "legendFormat": "Error Rate"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "P95 Latency",
+        "type": "graph",
+        "gridPos": {"x": 0, "y": 8, "w": 12, "h": 8},
+        "targets": [
+          {
+            "expr": "histogram_quantile(0.95, rate(http_request_duration_seconds_bucket{job=\"shipsmart-api\"}[5m]))",
+            "legendFormat": "P95 Latency"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Active Connections",
+        "type": "graph",
+        "gridPos": {"x": 12, "y": 8, "w": 12, "h": 8},
+        "targets": [
+          {
+            "expr": "http_connections_active",
+            "legendFormat": "Active"
+          },
+          {
+            "expr": "http_connections_waits",
+            "legendFormat": "Waiting"
+          }
+        ]
+      }
+    ]
+  }
+}

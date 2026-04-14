@@ -1,0 +1,397 @@
+# Shipsmart Configuration
+# Main configuration file for all project settings
+
+project:
+  name: shipsmart
+  tagline: "The Brain Behind Every Delivery."
+  version: 1.0.0
+  environment: development
+  debug: true
+
+data:
+  raw_dir: ./data/raw
+  processed_dir: ./data/processed
+  external_dir: ./data/external
+  features_dir: ./data/features
+  
+  simulation:
+    num_orders: 100000
+    num_drivers: 500
+    num_vehicles: 300
+    num_warehouses: 20
+    num_routes: 1000
+    num_locations: 500
+    error_rate: 0.05
+    missing_rate: 0.03
+    outlier_rate: 0.02
+  
+  external_apis:
+    weather:
+      provider: openweathermap
+      retry_attempts: 3
+      timeout: 10
+      cache_ttl: 3600
+    traffic:
+      provider: tomtom
+      retry_attempts: 3
+      timeout: 15
+      cache_ttl: 1800
+    holidays:
+      provider: nager_date
+      retry_attempts: 2
+      timeout: 5
+      cache_ttl: 86400
+
+database:
+  postgres:
+    host: localhost
+    port: 5432
+    database: shipsmart
+    user: shipsmart
+    password: changeme
+    pool_size: 20
+    max_overflow: 10
+    pool_timeout: 30
+  
+  redis:
+    host: localhost
+    port: 6379
+    password: changeme
+    db: 0
+    decode_responses: true
+  
+  feature_store:
+    type: feast
+    offline_store: postgresql
+    online_store: redis
+
+ml:
+  experiment_tracking:
+    provider: mlflow
+    tracking_uri: http://localhost:5000
+    experiment_name: shipsmart
+  
+  feature_store:
+    provider: feast
+    repo_path: ./feature_repo
+  
+  models:
+    classification:
+      - name: logistic_regression
+        enabled: true
+      - name: random_forest
+        enabled: true
+      - name: xgboost
+        enabled: true
+      - name: lightgbm
+        enabled: true
+      - name: catboost
+        enabled: true
+      - name: svm
+        enabled: true
+      - name: neural_network
+        enabled: true
+        framework: pytorch
+    
+    regression:
+      - name: linear_regression
+        enabled: true
+      - name: ridge
+        enabled: true
+      - name: lasso
+        enabled: true
+      - name: elasticnet
+        enabled: true
+      - name: random_forest
+        enabled: true
+      - name: xgboost
+        enabled: true
+      - name: lightgbm
+        enabled: true
+      - name: neural_network
+        enabled: true
+        framework: pytorch
+  
+  hyperparameter_tuning:
+    method: optuna
+    n_trials: 100
+    timeout: 3600
+  
+  cross_validation:
+    type: stratified_kfold
+    n_splits: 5
+    shuffle: true
+    random_state: 42
+  
+  evaluation:
+    classification_metrics:
+      - f1_score
+      - roc_auc
+      - precision
+      - recall
+      - accuracy
+    regression_metrics:
+      - rmse
+      - mae
+      - r2_score
+      - mape
+  
+  model_export:
+    formats:
+      - pickle
+      - onnx
+      - torchscript
+    save_path: ./models
+
+explainability:
+  shap:
+    enabled: true
+    background_samples: 1000
+    plot_types:
+      - summary
+      - dependence
+      - force
+      - waterfall
+  lime:
+    enabled: true
+    num_samples: 1000
+
+llm:
+  providers:
+    - name: ollama
+      enabled: true
+      base_url: http://localhost:11434
+      models:
+        - phi:2.7b
+        - mistral
+        - llama3
+        - qwen3.5:4b
+        - gemma4:e2b
+      default_model: ${OLLAMA_ACTIVE_MODEL}
+      temperature: 0.7
+      max_tokens: 2048
+    
+    - name: openai
+      enabled: true
+      api_key_env: OPENAI_API_KEY
+      model: gpt-4
+      temperature: 0.7
+      max_tokens: 2048
+    
+    - name: anthropic
+      enabled: true
+      api_key_env: ANTHROPIC_API_KEY
+      model: claude-3-opus-20240229
+      temperature: 0.7
+      max_tokens: 2048
+  
+  routing:
+    strategy: fallback
+    fallback_order:
+      - ollama
+      - openai
+      - anthropic
+  
+  rag:
+    chunk_size: 512
+    chunk_overlap: 50
+    top_k: 5
+    rerank: true
+
+vector_databases:
+  chromadb:
+    enabled: true
+    persist_dir: ./chroma_data
+  pinecone:
+    enabled: true
+    api_key_env: PINECONE_API_KEY
+    environment: us-west1-gcp
+    index: shipsmart
+  weaviate:
+    enabled: true
+    url: http://localhost:8080
+    api_key_env: WEAVIATE_API_KEY
+  qdrant:
+    enabled: true
+    host: localhost
+    port: 6333
+    api_key_env: QDRANT_API_KEY
+  milvus:
+    enabled: true
+    host: localhost
+    port: 19530
+  faiss:
+    enabled: true
+    index_type: IVF_FLAT
+    nlist: 100
+
+agents:
+  langgraph:
+    enabled: true
+    checkpointer: sqlite
+    max_iterations: 10
+    timeout: 300
+  autogen:
+    enabled: true
+    max_round: 10
+    speaker_selection: auto
+  mcp:
+    enabled: true
+    server_port: 8080
+
+api:
+  host: 0.0.0.0
+  port: 8000
+  reload: true
+  workers: 4
+  timeout: 60
+  
+  cors:
+    allow_origins:
+      - http://localhost:3000
+      - http://localhost:8080
+    allow_credentials: true
+    allow_methods: ["*"]
+    allow_headers: ["*"]
+  
+  authentication:
+    type: jwt
+    algorithm: HS256
+    token_expire_minutes: 30
+  
+  rate_limiting:
+    enabled: true
+    requests_per_minute: 60
+    requests_per_hour: 1000
+  
+  caching:
+    enabled: true
+    backend: redis
+    ttl: 300
+  
+  versioning:
+    enabled: true
+    default_version: v1
+    versions:
+      - v1
+      - v2
+
+frontend:
+  type: nextjs
+  port: 3000
+  
+  theme:
+    default: dark
+    primary_color: "#3B82F6"
+    secondary_color: "#10B981"
+  
+  features:
+    dashboard: true
+    chat: true
+    alerts: true
+    simulation: true
+    route_optimization: true
+    shap_viz: true
+
+kubernetes:
+  namespace: shipsmart
+  ingress_class: nginx
+  storage_class: standard
+  
+  resources:
+    api:
+      requests:
+        cpu: 500m
+        memory: 512Mi
+      limits:
+        cpu: 2000m
+        memory: 2Gi
+    ml:
+      requests:
+        cpu: 1000m
+        memory: 2Gi
+      limits:
+        cpu: 4000m
+        memory: 8Gi
+    frontend:
+      requests:
+        cpu: 250m
+        memory: 256Mi
+      limits:
+        cpu: 1000m
+        memory: 1Gi
+  
+  autoscaling:
+    enabled: true
+    min_replicas: 2
+    max_replicas: 10
+    target_cpu_utilization: 70
+
+observability:
+  prometheus:
+    enabled: true
+    port: 9090
+    scrape_interval: 15s
+  
+  grafana:
+    enabled: true
+    port: 3000
+    admin_user: admin
+    admin_password: admin
+  
+  loki:
+    enabled: true
+    port: 3100
+  
+  elasticsearch:
+    enabled: true
+    host: localhost
+    port: 9200
+  
+  jaeger:
+    enabled: true
+    port: 16686
+
+ci_cd:
+  gitlab:
+    enabled: true
+    runner_tags:
+      - docker
+      - kubernetes
+  github:
+    enabled: true
+  argocd:
+    enabled: true
+    server: argocd.local
+    sync_timeout: 300
+
+logging:
+  level: INFO
+  format: json
+  file: ./logs/shipsmart.log
+  max_bytes: 10485760
+  backup_count: 5
+  
+  loggers:
+    - name: shipsmart
+      level: DEBUG
+    - name: uvicorn
+      level: INFO
+    - name: sqlalchemy
+      level: WARNING
+
+testing:
+  pytest:
+    python_files: test_*.py
+    python_classes: Test*
+    python_functions: test_*
+    addopts: -v --tb=short --strict-markers
+  
+  coverage:
+    threshold: 80
+    report_format: html
+  
+  load_testing:
+    enabled: true
+    target_rps: 1000
+    duration: 300

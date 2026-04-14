@@ -4,30 +4,21 @@
 
 ## Section 1: Instructions from Previous AI Agent
 
-*(To be filled by Milestone #79 agent)*
-
----
-
-## Section 2: Detailed Prompt to Finish Milestone
-
-### Task: Add Morning/Afternoon/Evening/Night Features
-
-**Your Role:** Data Engineer
-
-**Instructions:**
-1. Create time-of-day categories:
-   - Night (0-6)
-   - Morning (6-12)
-   - Afternoon (12-18)
-   - Evening (18-24)
-
-2. Create binary flags for each period
-3. Add peak delivery times (10-12, 18-20)
-4. Save to `data/features/time_of_day.csv`
-5. Commit
+Milestone 79 complete. Holiday features created.
 
 ---
 
 ## Section 3: Instructions for Next AI Agent
 
-*(Empty)*
+Milestone 80 complete. Created:
+- src/features/time_of_day_features.py
+
+Features created:
+- hour, time_period
+- is_night, is_morning, is_afternoon, is_evening
+- is_peak_delivery_morning, is_peak_delivery_evening, is_peak_delivery
+- is_late_night, is_early_morning, is_midday, is_late_afternoon
+- delivery_urgency
+- Also includes create_hour_buckets() for 2-hour buckets
+
+Continue with Milestone 81: Create Weather-Location Features

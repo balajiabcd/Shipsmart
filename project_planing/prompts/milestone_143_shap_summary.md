@@ -1,7 +1,10 @@
 # Milestone #143: Create SHAP Summary Plots
 
+**Status:** COMPLETED
+
 **Your Role:** ML Engineer 2
 
+**Instructions:**
 Create summary plot:
 ```python
 import shap
@@ -17,4 +20,20 @@ plt.close()
 print("Saved shap_summary.png")
 ```
 
-Save to `models/shap_summary.png`. Commit.
+**Completed:**
+- Created `src/explainability/shap_summary.py` with:
+  - `create_shap_summary_plot()` - creates dot/bar summary plots
+  - `create_shap_summary_bar_plot()` - creates bar-style summary
+  - `get_feature_importance_from_shap()` - extracts feature importance
+- Plots saved to models/ directory
+- Supports both dot and bar plot types
+
+**Next Milestone:** Proceed to #144 - SHAP Dependence Plots
+
+---
+
+## Section 3: Instructions for Next AI Agent
+
+Proceed to Milestone #144: SHAP Dependence Plots
+- Create dependence plots for top features
+- Save to docs/images/

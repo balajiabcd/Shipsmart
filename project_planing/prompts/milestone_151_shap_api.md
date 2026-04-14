@@ -1,7 +1,10 @@
 # Milestone #151: Integrate SHAP with API
 
+**Status:** COMPLETED
+
 **Your Role:** ML Engineer 2
 
+**Instructions:**
 Add SHAP explanation endpoint to API:
 
 ```python
@@ -36,4 +39,19 @@ async def get_feature_importance():
     return importance.to_dict(orient="records")
 ```
 
-Add to `api/main.py`. Commit.
+**Completed:**
+- Created `src/api/endpoints/explainability.py` with endpoints:
+  - `POST /explain/shap` - single prediction SHAP explanation
+  - `GET /explain/feature-importance` - global feature importance
+  - `POST /explain/shap-batch` - batch SHAP explanations
+  - `GET /explain/model-info` - model information
+
+**Next Milestone:** Proceed to #152 - Permutation Importance
+
+---
+
+## Section 3: Instructions for Next AI Agent
+
+Proceed to Milestone #152: Calculate Permutation Importance
+- Use sklearn.inspection.permutation_importance
+- Compare with SHAP importance

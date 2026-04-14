@@ -1,0 +1,74 @@
+{
+  "dashboard": {
+    "title": "Shipsmart Database Metrics",
+    "tags": ["shipsmart", "database", "postgres"],
+    "timezone": "browser",
+    "refresh": "30s",
+    "panels": [
+      {
+        "id": 1,
+        "title": "PostgreSQL Connections",
+        "type": "graph",
+        "gridPos": {"x": 0, "y": 0, "w": 8, "h": 8},
+        "targets": [
+          {
+            "expr": "pg_stat_database_numbackends",
+            "legendFormat": "Active Connections"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Query Duration",
+        "type": "graph",
+        "gridPos": {"x": 8, "y": 0, "w": 8, "h": 8},
+        "targets": [
+          {
+            "expr": "pg_stat_database_mean_exec_time",
+            "legendFormat": "Mean Exec Time (ms)"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Cache Hit Ratio",
+        "type": "gauge",
+        "gridPos": {"x": 0, "y": 8, "w": 8, "h": 6},
+        "targets": [
+          {
+            "expr": "pg_stat_database_blks_hit / (pg_stat_database_blks_hit + pg_stat_database_blks_read)",
+            "legendFormat": "Cache Hit Ratio"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Dead Tuples",
+        "type": "graph",
+        "gridPos": {"x": 8, "y": 8, "w": 8, "h": 6},
+        "targets": [
+          {
+            "expr": "pg_stat_database_n_dead_tup",
+            "legendFormat": "Dead Tuples"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Transactions",
+        "type": "graph",
+        "gridPos": {"x": 0, "y": 14, "w": 16, "h": 8},
+        "targets": [
+          {
+            "expr": "rate(pg_stat_database_xact_commit[5m])",
+            "legendFormat": "Commits/s"
+          },
+          {
+            "expr": "rate(pg_stat_database_xact_rollback[5m])",
+            "legendFormat": "Rollbacks/s"
+          }
+        ]
+      }
+    ]
+  }
+}

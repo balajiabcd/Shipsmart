@@ -140,6 +140,37 @@ docker-compose up -d
 
 - [Project Plan](./project_planing/plan/1_origin_plan.md)
 - [Team Structure](./team/team_structure.md)
+- [User Guide](./docs/guides/user_guide.md)
+- [API Reference](./docs/api/reference.md)
+- [Architecture Diagram](./docs/architecture.md)
+- [Deployment Guide](./docs/guides/deployment.md)
+- [Operations Runbook](./docs/guides/runbook.md)
+
+---
+
+## Quick Start
+
+### Development (Docker Compose)
+```bash
+# Start all services
+cd docker
+docker-compose up -d
+
+# Services
+# API:        http://localhost:8000
+# Frontend:   http://localhost:3000
+# Grafana:    http://localhost:3001 (admin/admin)
+# Prometheus: http://localhost:9090
+```
+
+### Production (Kubernetes)
+```bash
+# Apply Kubernetes manifests
+kubectl apply -k config/kubernetes/overlays/production
+
+# Or install with Helm
+helm install shipsmart config/helm/shipsmart
+```
 
 ---
 
@@ -149,6 +180,12 @@ docker-compose up -d
 - Classification ROC-AUC: ≥ 0.95
 - Regression RMSE: ≤ 8 minutes
 - API Response Time: < 300ms
+
+---
+
+## Version
+
+**v1.0.0** - Initial Release (April 2026)
 
 ---
 

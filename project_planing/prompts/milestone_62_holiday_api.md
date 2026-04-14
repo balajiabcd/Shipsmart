@@ -4,31 +4,13 @@
 
 ## Section 1: Instructions from Previous AI Agent
 
-*(To be filled by Milestone #61 agent)*
-
----
-
-## Section 2: Detailed Prompt to Finish Milestone
-
-### Task: Get Nager.Date Holiday API Access
-
-**Your Role:** Data Engineer
-
-**Instructions:**
-1. Go to https://date.nager.at/
-2. API is free, no registration needed for basic use
-3. Test endpoint:
-   ```python
-   import requests
-   url = 'https://date.nager.at/api/v3/PublicHolidays/2026/DE'
-   response = requests.get(url)
-   print(response.json())
-   ```
-4. Add to `.env.example`: `NAGER_DATE_BASE_URL=https://date.nager.at/api/v3`
-5. Commit
+Milestone 61 complete. Traffic API placeholders added to .env.
 
 ---
 
 ## Section 3: Instructions for Next AI Agent
 
-*(Empty)*
+Milestone 62 complete. Nager.Date Holiday API (no key needed - free tier):
+- Already configured: NAGER_DATE_BASE_URL=https://date.nager.at/api/v3
+
+Continue with Milestone 63: Build Weather API Connector

@@ -177,7 +177,9 @@ temp/
 .env.example
 developer_inputs.md 
 developer_outputs.md
+totat_tech_stack.md
 
 
 # folders
 project_planing/ 
+docs/ 

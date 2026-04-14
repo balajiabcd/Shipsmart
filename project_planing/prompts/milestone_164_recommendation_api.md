@@ -1,7 +1,10 @@
 # Milestone #164: Create Recommendation API Endpoint
 
+**Status:** COMPLETED
+
 **Your Role:** AI/LLM Engineer
 
+**Instructions:**
 Expose recommendation endpoint:
 
 ```python
@@ -65,4 +68,20 @@ async def get_priority_queue():
     return {"queue": get_queued_deliveries()}
 ```
 
-Add to `api/main.py`. Commit.
+**Completed:**
+- Created `src/api/endpoints/recommendations.py` with endpoints:
+  - `POST /recommend/` - Single delivery recommendations
+  - `POST /recommend/batch` - Batch recommendations
+  - `GET /recommend/priority-queue` - Get priority queue
+  - `POST /recommend/priority-queue/enqueue` - Add to queue
+  - `GET /recommend/health` - Health check
+
+**Milestones 155-164 COMPLETED**
+
+---
+
+## Section 3: Instructions for Next AI Agent
+
+Proceed to Milestone #165: Test Decision Engine
+- Create unit tests for decision logic
+- Validate recommendations

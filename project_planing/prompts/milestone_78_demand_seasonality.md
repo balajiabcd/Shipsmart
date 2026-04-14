@@ -4,31 +4,22 @@
 
 ## Section 1: Instructions from Previous AI Agent
 
-*(To be filled by Milestone #77 agent)*
-
----
-
-## Section 2: Detailed Prompt to Finish Milestone
-
-### Task: Identify Seasonal Patterns
-
-**Your Role:** Data Engineer
-
-**Instructions:**
-1. Create seasonality features:
-   - Month of year (1-12)
-   - Quarter (1-4)
-   - Is holiday season (Nov-Dec)
-   - Is summer (Jun-Aug)
-   - Is month-end (for delivery spikes)
-   - Day of month patterns
-
-2. Create lag features for demand forecasting
-3. Save to `data/features/seasonality_features.csv`
-4. Commit
+Milestone 77 complete. Route complexity features created.
 
 ---
 
 ## Section 3: Instructions for Next AI Agent
 
-*(Empty)*
+Milestone 78 complete. Created:
+- src/features/seasonality_features.py
+
+Features created:
+- month, quarter, week_of_year, day_of_year
+- is_holiday_season, is_summer, is_peak_shopping, is_low_season
+- is_month_start, is_month_mid, is_month_end
+- is_quarter_start, is_quarter_end
+- season, seasonal_demand_factor
+- is_holiday, is_new_year
+- Also includes create_lag_features() and create_rolling_features()
+
+Continue with Milestone 79: Create Holiday Features

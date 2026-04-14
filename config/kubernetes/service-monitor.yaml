@@ -1,0 +1,56 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: shipsmart-api-monitor
+  namespace: shipsmart
+  labels:
+    release: prometheus
+spec:
+  selector:
+    matchLabels:
+      app: shipsmart-api
+  namespaceSelector:
+    matchNames:
+      - shipsmart
+  endpoints:
+  - port: http
+    interval: 30s
+    path: /metrics
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: shipsmart-ml-monitor
+  namespace: shipsmart
+  labels:
+    release: prometheus
+spec:
+  selector:
+    matchLabels:
+      app: shipsmart-ml
+  namespaceSelector:
+    matchNames:
+      - shipsmart
+  endpoints:
+  - port: grpc
+    interval: 30s
+    path: /metrics
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: shipsmart-frontend-monitor
+  namespace: shipsmart
+  labels:
+    release: prometheus
+spec:
+  selector:
+    matchLabels:
+      app: shipsmart-frontend
+  namespaceSelector:
+    matchNames:
+      - shipsmart
+  endpoints:
+  - port: http
+    interval: 30s
+    path: /metrics

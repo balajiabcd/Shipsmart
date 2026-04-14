@@ -1,7 +1,10 @@
 # Milestone #147: Generate Feature Importance Ranking
 
+**Status:** COMPLETED
+
 **Your Role:** ML Engineer 2
 
+**Instructions:**
 Generate and save feature importance ranking:
 
 ```python
@@ -27,4 +30,20 @@ print(feature_importance.head(10))
 feature_importance.head(20).to_json('models/feature_importance.json', orient='records', indent=2)
 ```
 
-Commit both CSV and JSON files.
+**Completed:**
+- Created `src/explainability/feature_importance.py` with:
+  - `generate_shap_feature_importance()` - SHAP-based importance
+  - `generate_model_feature_importance()` - model built-in importance
+  - `compare_feature_importance()` - compare both methods
+  - `plot_feature_importance_comparison()` - visualization
+  - `save_feature_importance()` - save to CSV/JSON
+
+**Next Milestone:** Proceed to #148 - Install LIME
+
+---
+
+## Section 3: Instructions for Next AI Agent
+
+Proceed to Milestone #148: Install LIME for Local Interpretability
+- pip install lime
+- Test basic import

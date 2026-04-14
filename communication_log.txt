@@ -1,0 +1,15 @@
+# Shipsmart Communication Log
+
+Format:
+[YYYY-MM-DD HH:MM] FROM: [Role] TO: [Role]
+TYPE: [Question/Update/Blocker/Approval]
+MESSAGE: [Content]
+ACTION: [Required action if any]
+
+---
+
+Example Entry:
+[2026-04-13 09:00] FROM: ML Engineer 1 TO: Team Lead
+TYPE: Update
+MESSAGE: Started training classification models. Using XGBoost, LightGBM, CatBoost.
+ACTION: Waiting for training data from Data Engineer

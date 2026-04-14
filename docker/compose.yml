@@ -1,0 +1,134 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: docker/api/Dockerfile
+    container_name: shipsmart-api
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://shipsmart:shipsmart@postgres:5432/shipsmart
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - LOG_LEVEL=INFO
+      - ENVIRONMENT=development
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - shipsmart-network
+    restart: unless-stopped
+
+  ml-service:
+    build:
+      context: ..
+      dockerfile: docker/ml/Dockerfile
+    container_name: shipsmart-ml
+    ports:
+      - "8001:8001"
+    environment:
+      - MODEL_PATH=/app/models
+      - LOG_LEVEL=INFO
+    volumes:
+      - ../models:/app/models:ro
+    networks:
+      - shipsmart-network
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ..
+      dockerfile: docker/frontend/Dockerfile
+    container_name: shipsmart-frontend
+    ports:
+      - "3000:80"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://api:8000/api/v1
+    depends_on:
+      - api
+    networks:
+      - shipsmart-network
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: shipsmart-postgres
+    environment:
+      - POSTGRES_DB=shipsmart
+      - POSTGRES_USER=shipsmart
+      - POSTGRES_PASSWORD=shipsmart
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - shipsmart-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U shipsmart"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: shipsmart-redis
+    command: redis-server --requirepass shipsmart
+    volumes:
+      - redis_data:/data
+    ports:
+      - "6379:6379"
+    networks:
+      - shipsmart-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  prometheus:
+    image: prom/prometheus:v2.45.0
+    container_name: shipsmart-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ../observability/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ../observability/prometheus/alerts.yml:/etc/prometheus/rules/alerts.yml:ro
+      - prometheus_data:/prometheus
+    networks:
+      - shipsmart-network
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana:10.0.0
+    container_name: shipsmart-grafana
+    ports:
+      - "3001:3000"
+    volumes:
+      - ../observability/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ../observability/grafana/dashboards:/var/lib/grafana/dashboards:ro
+      - grafana_data:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+    depends_on:
+      - prometheus
+    networks:
+      - shipsmart-network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  redis_data:
+  prometheus_data:
+  grafana_data:
+
+networks:
+  shipsmart-network:
+    driver: bridge

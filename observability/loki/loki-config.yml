@@ -1,0 +1,65 @@
+auth_enabled: false
+
+server:
+  http_listen_port: 3100
+  grpc_listen_port: 9096
+
+common:
+  path_prefix: /loki
+  storage:
+    filesystem:
+      chunks_directory: /loki/chunks
+      rules_directory: /loki/rules
+  replication_factor: 1
+  ring:
+    instance_addr: 127.0.0.1
+    kvstore:
+      store: inmemory
+
+schema_config:
+  configs:
+    - from: 2024-01-01
+      store: boltdb-shipper
+      object_store: filesystem
+      schema: v11
+      index:
+        prefix: index_
+        period: 24h
+
+limits_config:
+  reject_old_samples: true
+  reject_old_samples_max_age: 168h
+
+analytics:
+  reporting_enabled: false
+
+scrape_configs:
+  - job_name: kubernetes
+    kubernetes_sd_configs:
+      - role: pod
+    pipeline_stages:
+      - docker: {}
+    relabel_configs:
+      - source_labels: [__meta_kubernetes_pod_name]
+        action: replace
+        target_label: pod
+      - source_labels: [__meta_kubernetes_namespace]
+        action: replace
+        target_label: namespace
+      - source_labels: [__meta_kubernetes_pod_label_app]
+        action: replace
+        target_label: app
+
+  - job_name: shipsmart-api
+    static_configs:
+      - targets: [shipsmart-api:8000]
+        labels:
+          job: shipsmart-api
+          app: shipsmart
+
+  - job_name: shipsmart-frontend
+    static_configs:
+      - targets: [shipsmart-frontend:3000]
+        labels:
+          job: shipsmart-frontend
+          app: shipsmart

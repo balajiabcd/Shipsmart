@@ -1,0 +1,34 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: shipsmart
+
+resources:
+  - namespace.yaml
+  - deployment.yaml
+  - service.yaml
+  - ingress.yaml
+  - configmap.yaml
+  - secrets.yaml
+  - pvc.yaml
+  - hpa.yaml
+  - pdb.yaml
+  - network-policy.yaml
+
+commonLabels:
+  app: shipsmart
+  environment: production
+
+configMapGenerator:
+  - name: shipsmart-config
+    literals:
+      - LOG_LEVEL=INFO
+      - ENVIRONMENT=production
+
+secretGenerator:
+  - name: shipsmart-secrets
+    type: Opaque
+    literals:
+      - database-url=postgresql://shipsmart:changeme@shipsmart-postgres:5432/shipsmart
+      - redis-password=changeme
+      - jwt-secret=change-me-in-production

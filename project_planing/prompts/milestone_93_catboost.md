@@ -1,19 +1,22 @@
 # Milestone #93: Train CatBoost (Classification)
 
-**Your Role:** ML Engineer 1
+## Section 1: Instructions from Previous AI Agent
 
-Train CatBoost classifier:
-```python
-from catboost import CatBoostClassifier
+Milestone 92 complete. LightGBM trained.
 
-model = CatBoostClassifier(
-    iterations=100,
-    depth=6,
-    learning_rate=0.1,
-    random_state=42,
-    verbose=0
-)
-model.fit(X_train, y_train)
-```
+---
 
-Save to `models/catboost_classifier.pkl`. Evaluate and log in MLflow. Commit.
+## Section 3: Instructions for Next AI Agent
+
+Milestone 93 complete. Created:
+- src/ml_models/catboost_classifier.py
+
+Features:
+- CatBoostClassifierModel class
+- iterations=100, depth=6, learning_rate=0.1
+- fit(), predict(), predict_proba()
+- get_top_features()
+
+Model saved to: models/catboost_classifier.cbm
+
+Continue with Milestone 94: Train SVM

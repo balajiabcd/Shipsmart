@@ -4,28 +4,19 @@
 
 ## Section 1: Instructions from Previous AI Agent
 
-*(To be filled by Milestone #75 agent)*
-
----
-
-## Section 2: Detailed Prompt to Finish Milestone
-
-### Task: Calculate Warehouse Processing Metrics
-
-**Your Role:** Data Engineer
-
-**Instructions:**
-1. Create warehouse efficiency features from `warehouse_performance` table:
-   - Average throughput per warehouse
-   - Average processing time
-   - Delay rate
-   - Efficiency score (composite)
-
-2. Save to `data/features/warehouse_scores.csv`
-3. Commit
+Milestone 75 complete. Driver performance features created.
 
 ---
 
 ## Section 3: Instructions for Next AI Agent
 
-*(Empty)*
+Milestone 76 complete. Created:
+- src/features/warehouse_features.py
+
+Features created:
+- avg_throughput, max_throughput, avg_processing_time, avg_delay_rate
+- avg_utilization, max_utilization
+- efficiency_score, efficiency_level
+- is_bottleneck, is_efficient
+
+Continue with Milestone 77: Create Route Complexity Score

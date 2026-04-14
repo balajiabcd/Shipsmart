@@ -1,0 +1,63 @@
+project: shipsmart
+provider: local
+registry: registry.db
+online_store:
+  type: redis
+  redis_host: localhost
+  redis_port: 6379
+offline_store:
+  type: file
+
+entity_keys:
+  - order_id
+  - driver_id
+  - warehouse_id
+  - route_id
+  - location_id
+
+features:
+  - name: temporal_features
+    entities:
+      - name: order_id
+        value_type: string
+    ttl: 86400
+  - name: distance_features
+    entities:
+      - name: order_id
+        value_type: string
+    ttl: 604800
+  - name: weather_features
+    entities:
+      - name: location_id
+        value_type: string
+    ttl: 3600
+  - name: traffic_features
+    entities:
+      - name: route_id
+        value_type: string
+    ttl: 1800
+  - name: driver_features
+    entities:
+      - name: driver_id
+        value_type: string
+    ttl: 86400
+  - name: warehouse_features
+    entities:
+      - name: warehouse_id
+        value_type: string
+    ttl: 86400
+  - name: route_features
+    entities:
+      - name: route_id
+        value_type: string
+    ttl: 604800
+  - name: seasonality_features
+    entities:
+      - name: order_id
+        value_type: string
+    ttl: 86400
+  - name: holiday_features
+    entities:
+      - name: order_id
+        value_type: string
+    ttl: 86400

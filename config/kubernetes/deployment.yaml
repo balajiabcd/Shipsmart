@@ -1,0 +1,153 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shipsmart-api
+  namespace: shipsmart
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: shipsmart-api
+  template:
+    metadata:
+      labels:
+        app: shipsmart-api
+        version: v1
+    spec:
+      containers:
+      - name: api
+        image: shipsmart/api:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8000
+          name: http
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "250m"
+          limits:
+            memory: "1Gi"
+            cpu: "500m"
+        env:
+        - name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: shipsmart-secrets
+              key: database-url
+        - name: REDIS_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: shipsmart-config
+              key: redis-host
+        - name: LOG_LEVEL
+          valueFrom:
+            configMapKeyRef:
+              name: shipsmart-config
+              key: log-level
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /ready
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 5
+      restartPolicy: Always
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shipsmart-ml
+  namespace: shipsmart
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: shipsmart-ml
+  template:
+    metadata:
+      labels:
+        app: shipsmart-ml
+        version: v1
+    spec:
+      containers:
+      - name: ml-service
+        image: shipsmart/ml-service:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8001
+          name: grpc
+        resources:
+          requests:
+            memory: "2Gi"
+            cpu: "1000m"
+          limits:
+            memory: "4Gi"
+            cpu: "2000m"
+        env:
+        - name: MODEL_PATH
+          value: "/models/delay_prediction"
+        - name: LOG_LEVEL
+          valueFrom:
+            configMapKeyRef:
+              name: shipsmart-config
+              key: log-level
+        volumeMounts:
+        - name: model-storage
+          mountPath: /models
+      volumes:
+      - name: model-storage
+        persistentVolumeClaim:
+          claimName: shipsmart-models-pvc
+      restartPolicy: Always
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shipsmart-frontend
+  namespace: shipsmart
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: shipsmart-frontend
+  template:
+    metadata:
+      labels:
+        app: shipsmart-frontend
+        version: v1
+    spec:
+      containers:
+      - name: frontend
+        image: shipsmart/frontend:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3000
+          name: http
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "100m"
+          limits:
+            memory: "512Mi"
+            cpu: "200m"
+        env:
+        - name: NEXT_PUBLIC_API_URL
+          value: "http://shipsmart-api:80/api/v1"
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 10
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 5
+          periodSeconds: 5
+      restartPolicy: Always

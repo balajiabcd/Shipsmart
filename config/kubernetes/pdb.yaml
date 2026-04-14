@@ -1,0 +1,32 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: shipsmart-api-pdb
+  namespace: shipsmart
+spec:
+  minAvailable: 2
+  selector:
+    matchLabels:
+      app: shipsmart-api
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: shipsmart-ml-pdb
+  namespace: shipsmart
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app: shipsmart-ml
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: shipsmart-frontend-pdb
+  namespace: shipsmart
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app: shipsmart-frontend

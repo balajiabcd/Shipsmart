@@ -1,7 +1,10 @@
 # Milestone #152: Create Permutation Importance
 
+**Status:** COMPLETED
+
 **Your Role:** ML Engineer 2
 
+**Instructions:**
 Calculate permutation importance:
 
 ```python
@@ -40,4 +43,19 @@ print("Top 10 features by permutation importance:")
 print(importance_df.head(10))
 ```
 
-Commit.
+**Completed:**
+- Created `src/explainability/permutation_importance.py` with:
+  - `calculate_permutation_importance()` - calculate importance
+  - `save_permutation_importance()` / `load_permutation_importance()` - persistence
+  - `plot_permutation_importance()` - visualization
+  - `compare_permutation_shap()` - compare methods
+
+**Next Milestone:** Proceed to #153 - Partial Dependence Plots
+
+---
+
+## Section 3: Instructions for Next AI Agent
+
+Proceed to Milestone #153: Create Partial Dependence Plots
+- Use sklearn.inspection.partial_dependence
+- Create visualizations for top features

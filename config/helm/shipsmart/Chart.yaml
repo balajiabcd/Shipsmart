@@ -1,0 +1,26 @@
+apiVersion: v2
+name: shipsmart
+description: A Helm chart for Shipsmart - AI-Powered Delivery Management
+type: application
+version: 0.1.0
+appVersion: "1.0"
+
+keywords:
+  - shipsmart
+  - delivery
+  - logistics
+  - ai
+  - ml
+
+maintainers:
+  - name: Shipsmart Team
+
+dependencies:
+  - name: postgresql
+    version: 12.x.x
+    repository: "https://charts.bitnami.com/bitnami"
+    condition: postgresql.enabled
+  - name: redis
+    version: 17.x.x
+    repository: "https://charts.bitnami.com/bitnami"
+    condition: redis.enabled

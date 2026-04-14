@@ -14,26 +14,12 @@ class AutoGenSetup:
         except ImportError:
             return False
 
-    def create_llm_config(self, provider: str = "ollama"):
-        if provider == "ollama":
-            return {
-                "model": os.getenv("OLLAMA_ACTIVE_MODEL", "phi:2.7b"),
-                "base_url": os.getenv("OLLAMA_BASE_URL", "http://localhost:11434"),
-                "api_key": "ollama",
-            }
-        elif provider == "openai":
-            return {
-                "model": "gpt-4",
-                "api_key": os.getenv("OPENAI_API_KEY"),
-                "temperature": 0.7,
-            }
-        elif provider == "anthropic":
-            return {
-                "model": "claude-3-5-sonnet-20241022",
-                "api_key": os.getenv("ANTHROPIC_API_KEY"),
-                "temperature": 0.7,
-            }
-        return {}
+    def create_llm_config(self):
+        return {
+            "model": os.getenv("OLLAMA_ACTIVE_MODEL", "phi:2.7b"),
+            "base_url": os.getenv("OLLAMA_BASE_URL", "http://localhost:11434"),
+            "api_key": "ollama",
+        }
 
     def create_conversable_agent(
         self, name: str, system_message: str, llm_config: dict
@@ -92,5 +78,5 @@ class AutoGenSetup:
 
 if __name__ == "__main__":
     setup = AutoGenSetup()
-    config = setup.create_llm_config("ollama")
+    config = setup.create_llm_config()
     print(f"AutoGen setup: available={setup._autogen_available}")

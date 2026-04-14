@@ -39,7 +39,7 @@ Shipsmart is an **end-to-end AI-powered logistics delay prediction system** desi
 
 ### LLM & AI
 - **Local LLM**: Ollama (Llama 3, Mistral, Phi-3)
-- **Cloud LLM**: OpenAI (GPT-4), Anthropic (Claude)
+- **Cloud LLM**: OpenAI (GPT-4), Anthropic (Claude) - *requires API keys*
 - **Agent Frameworks**: LangChain, LangGraph, AutoGen, MCP
 - **Vector Databases**: ChromaDB, Pinecone, Weaviate, Qdrant, Milvus, FAISS
 
